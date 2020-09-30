@@ -1,0 +1,29 @@
+//@import '../../theme/variables.scss';
+header-mobile {
+    .button:hover,
+    .button{
+      background-color: transparent;
+     // color: color($colors, primary);
+      box-shadow: none;
+      font-size: 18px;
+  
+    }
+    img.logo-mobile{
+      max-width: 15%;
+    }
+  
+     .logo-menu {
+      max-width: 100px;
+      padding: 5px 0;
+  }
+  
+  .button-filter {
+   /// color: color($colors, title);
+    background-color: transparent;
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  }
+  

@@ -1,0 +1,62 @@
+
+  
+    [
+  {
+    "estacionamento":
+    {
+      "name": "Estacionamento Park",
+      "address": "Av. Antártica, 608 ",   
+      "address1": "Bela Vista",  
+      "city": "São Paulo",
+      "in": "08:18",
+      "out": "22:00",
+      "tel": "(11) 99999-9999",
+      "email": "estacionamento@estacionamnento.com",
+      "distance": "210 metros",
+      "time-at": "(2 minutos)",
+      "value": "R$ 50",
+     "reviews": "5,6",
+     "info": "Saída fácil para Avenida Antártica sentido marginal. Este estacionamento possui 50 vagas"
+
+
+    }
+  },
+  {
+    "estacionamento":
+    {
+      "name": "Reserva Park",
+      "address":"Rua José Antônio Coelho, 110",
+      "city": "São Paulo",
+      "in": "08:18",
+      "out": "22:00",
+      "tel": "(11) 99999-9999",
+      "email": "estacionamento@estacionamnento.com",
+      "distance": "210 metros",
+      "time-at": "(2 minutos)",
+      "value": "R$ 50",
+     "reviews": "5,6",
+     "info": "Saída fácil para Avenida Antártica sentido marginal. Este estacionamento possui 50 vagas"
+
+
+    }
+  },
+  {
+    "estacionamento":
+    {
+      "name": "Park Wonderfull",
+      "address":"Rua José Antônio Coelho,47",
+      "city": "São Paulo",
+      "in": "08:18",
+      "out": "22:00",
+      "tel": "(11) 99999-9999",
+      "email": "estacionamento@estacionamnento.com",
+      "distance": "210 metros",
+      "time-at": "(2 minutos)",
+      "value": "R$ 50",
+     "reviews": "5,6",
+     "info": "Saída fácil para Avenida Antártica sentido marginal. Este estacionamento possui 50 vagas"
+
+
+    }
+  }
+]

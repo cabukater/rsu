@@ -1,0 +1,105 @@
+ion-grid{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+ p{
+   font-family: 'lato-regular';
+   font-size: 14px;
+   cursor: pointer;
+ }
+
+ .logo-menu{
+    max-width: 100px;
+   text-align: center !important;
+   margin: 0 auto
+ }
+
+ ion-row{
+
+    flex: 1;
+    padding: 0;
+}
+
+ion-col{
+  display: flex;
+}
+
+ button {
+  height: 90%;
+  text-align: center;
+  //background-color: #f1f1f1 !important;
+  width: 90%;
+  margin: 5% 5%;
+  border-radius: 3px;
+  border: 1px solid #174368;
+  color: #174368;
+  font-weight: 300;
+  transition: 1s ease-in-out;
+   :hover{
+    background-color: #174368;   
+  }
+}
+
+button svg {
+ height: 30px;
+  margin:0 auto 10px auto;
+  display: block;
+  font-size: 30px;
+}
+
+button.btn-logout svg {
+  height: 22px;
+  width: 32px;
+  position: absolute;
+  right: 37px;
+  margin-top: -4px;
+}
+
+button.btn-logout {
+  height: 53px;
+  background-color: #eaeaea !important;
+  color: red;
+  font-size: 16px;
+  border: 1px solid #d6bfbf;
+}
+ .bg-map{
+  // background-image: url('../../assets/img/mapa.png');
+   background-size: cover;
+   min-height:120px ; 
+
+ }
+  .toolbar-content {
+    background-color: #fff;
+  }
+  .badge {
+    width: 100px;
+    height: 100px;
+    background-color: #efefef;
+    margin: 0 auto;
+    border-radius: 200px;
+    overflow: hidden;
+  }
+  ion-header {
+    max-height: 170px;
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0px 6px 5px 0px rgba(243, 243, 243, 0.75);
+  }
+  .header-md::after {
+    display: none;
+  }
+  .menu {
+    margin-top: 30px;
+  }
+  .menu .icon {
+    font-size: 25px;
+    color: #7c4dff;
+    height: 30px;
+  }
+  button {
+    background-color: transparent;
+  }
+  .toolbar-background-md {
+    background-color: transparent;
+  }

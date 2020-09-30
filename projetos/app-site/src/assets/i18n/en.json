@@ -1,0 +1,6 @@
+{
+    "X" : "en",
+    "HOME": {
+        "HELLO": "hello {{value}}"
+    }
+}

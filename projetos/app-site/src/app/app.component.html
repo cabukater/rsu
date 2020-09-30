@@ -1,0 +1,15 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar [hidden]="screen != 'desktop'" (window:resize)="onResize($event)">
+      <app-menu-desktop ></app-menu-desktop>
+    </ion-toolbar>
+    <app-header-mobile [hidden]="screen != 'mobile'" (window:resize)="onResize($event)"></app-header-mobile>
+  </ion-header>
+<ion-content>
+   <router-outlet ></router-outlet>
+</ion-content>
+<ion-footer class="shadow-top" [hidden]="screen != 'mobile'" (window:resize)="onResize($event)">
+ 
+</ion-footer>
+
+</ion-app>

@@ -1,0 +1,1185 @@
+{
+	"self": {
+		"href": "https://localhost:xxx/",
+		"rel": ["collection"]
+	},
+	"size": 6,
+	"status": "Ok",
+	"value": [{
+			"id": "5a6687e492a1c303cc2b494d",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.6761952, -23.5284526]
+			},
+			"name": "CS Park Estacionamento",
+			"bandeira": null,
+			"address": "Av. Antártica, 608 - Água Branca, São Paulo - SP, 05003-020, Brazil",
+			"phone": "(11) 3312-0155",
+			"site": "http://www.cspark.com.br/",
+			"qtdVagas": 50,
+			"observacoes": "Saída fácil para Avenida Antártica sentido marginal.",
+			"destacado": true,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": true,
+			"proprietarioConhecido": true,
+			"photo1": "https://maps.googleapis.com/maps/api/streetview?size=420x420&location=-23.5284526,-46.6761952&heading=280&pitch=-0.76",
+			"prices": [{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 0
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 1
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 2
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 3
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 4
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 5
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 6
+				}
+			],
+			"openingHours": [{
+					"open": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 0,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 1,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 1,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 2,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 2,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 3,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 3,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 4,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 4,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 5,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 5,
+						"hours": 23,
+						"minutes": 59
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 6,
+						"hours": 0,
+						"minutes": 1
+					},
+					"close": {
+						"dayOfWeek": 6,
+						"hours": 23,
+						"minutes": 59
+					}
+				}
+			],
+			"photos": [],
+			"eventos": [{
+					"eventoDiaId": 41,
+					"valorDia": 50.0,
+					"qtdVagas": 40,
+					"dataHoraInicioEstacionamento": "2018-04-22T12:00:00Z",
+					"dataHoraFimEstacionamento": "2018-04-23T04:00:00Z"
+				},
+				{
+					"eventoDiaId": 44,
+					"valorDia": 50.0,
+					"qtdVagas": 40,
+					"dataHoraInicioEstacionamento": "2018-05-05T12:00:00Z",
+					"dataHoraFimEstacionamento": "2018-05-06T07:00:00Z"
+				},
+				{
+					"eventoDiaId": 45,
+					"valorDia": 50.0,
+					"qtdVagas": 20,
+					"dataHoraInicioEstacionamento": "2018-05-13T14:30:00Z",
+					"dataHoraFimEstacionamento": "2018-05-14T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 47,
+					"valorDia": 40.0,
+					"qtdVagas": 30,
+					"dataHoraInicioEstacionamento": "2018-06-01T18:30:00Z",
+					"dataHoraFimEstacionamento": "2018-06-02T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 50,
+					"valorDia": 40.0,
+					"qtdVagas": 60,
+					"dataHoraInicioEstacionamento": "2018-08-18T14:30:00Z",
+					"dataHoraFimEstacionamento": "2018-08-19T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 51,
+					"valorDia": 50.0,
+					"qtdVagas": 60,
+					"dataHoraInicioEstacionamento": "2018-09-29T17:00:00Z",
+					"dataHoraFimEstacionamento": "2018-09-30T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 53,
+					"valorDia": 50.0,
+					"qtdVagas": 50,
+					"dataHoraInicioEstacionamento": "2018-10-09T16:00:00Z",
+					"dataHoraFimEstacionamento": "2018-10-10T03:00:00Z"
+				},
+				{
+					"eventoDiaId": 54,
+					"valorDia": 50.0,
+					"qtdVagas": 50,
+					"dataHoraInicioEstacionamento": "2018-10-10T16:00:00Z",
+					"dataHoraFimEstacionamento": "2018-10-11T03:00:00Z"
+				}
+			],
+			"rating": 0
+		},
+		{
+			"id": "5ac6942bca96178d583d8d01",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.6726217, -23.532252]
+			},
+			"name": "G. Park Estacionamento e Valet",
+			"bandeira": null,
+			"address": "Rua Turiassú, 990 - Perdizes, São Paulo - SP, 05005-000, Brasil",
+			"phone": null,
+			"site": null,
+			"qtdVagas": 160,
+			"observacoes": null,
+			"destacado": true,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": true,
+			"proprietarioConhecido": true,
+			"photo1": "https://s3-sa-east-1.amazonaws.com/coopark-prod/b9c2e1d3-3a98-4603-a7a2-81128fa1d58a_G. Park Estacionamento 2.png",
+			"prices": [{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 0
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 1
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 2
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 3
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 4
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 5
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 6
+				}
+			],
+			"openingHours": [{
+					"open": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 1,
+						"hours": 8,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 1,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 2,
+						"hours": 8,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 2,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 3,
+						"hours": 8,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 3,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 4,
+						"hours": 8,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 4,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 5,
+						"hours": 8,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 5,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 6,
+						"hours": 10,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 6,
+						"hours": 20,
+						"minutes": 0
+					}
+				}
+			],
+			"photos": [{
+					"id": "9dea680f-d3eb-4027-83a0-6a80d57be565",
+					"name": "5279d356-322c-457e-9eaf-3425de361069_G. Park Estacionamento 1.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/5279d356-322c-457e-9eaf-3425de361069_G. Park Estacionamento 1.png"
+				},
+				{
+					"id": "ad19ecb9-145a-4e20-911e-56173df70ec5",
+					"name": "1fdc501b-5931-4674-8c35-fa7a1f37fd8a_G. Park Estacionamento 2.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/1fdc501b-5931-4674-8c35-fa7a1f37fd8a_G. Park Estacionamento 2.png"
+				},
+				{
+					"id": "0a994312-ee2b-4829-bf63-a3f477d9fdec",
+					"name": "1d1ea6ce-43bd-43b2-9c15-c426ca568a02_G. Park Estacionamento 2.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/1d1ea6ce-43bd-43b2-9c15-c426ca568a02_G. Park Estacionamento 2.png"
+				},
+				{
+					"id": "a89d4261-c16c-40cd-a807-fc6590847fc2",
+					"name": "b220096d-b651-41bb-9bbc-e3ece753f642_G. Park Estacionamento 2.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/b220096d-b651-41bb-9bbc-e3ece753f642_G. Park Estacionamento 2.png"
+				},
+				{
+					"id": "15cb3c65-34a5-4795-993d-74ce04dd5b5d",
+					"name": "b9c2e1d3-3a98-4603-a7a2-81128fa1d58a_G. Park Estacionamento 2.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/b9c2e1d3-3a98-4603-a7a2-81128fa1d58a_G. Park Estacionamento 2.png"
+				}
+			],
+			"eventos": [{
+					"eventoDiaId": 41,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-04-22T12:00:00Z",
+					"dataHoraFimEstacionamento": "2018-04-23T00:00:00Z"
+				},
+				{
+					"eventoDiaId": 44,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-05-05T10:00:00Z",
+					"dataHoraFimEstacionamento": "2018-05-06T04:00:00Z"
+				},
+				{
+					"eventoDiaId": 45,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-05-13T13:00:00Z",
+					"dataHoraFimEstacionamento": "2018-05-14T00:00:00Z"
+				},
+				{
+					"eventoDiaId": 47,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-06-01T18:00:00Z",
+					"dataHoraFimEstacionamento": "2018-06-02T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 51,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-09-29T17:00:00Z",
+					"dataHoraFimEstacionamento": "2018-09-30T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 50,
+					"valorDia": 25.0,
+					"qtdVagas": 120,
+					"dataHoraInicioEstacionamento": "2018-08-18T15:00:00Z",
+					"dataHoraFimEstacionamento": "2018-08-19T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 53,
+					"valorDia": 25.0,
+					"qtdVagas": 160,
+					"dataHoraInicioEstacionamento": "2018-10-09T16:00:00Z",
+					"dataHoraFimEstacionamento": "2018-10-10T02:00:00Z"
+				}
+			],
+			"rating": 0
+		},
+		{
+			"id": "5a9edf9673ebe70ea87bbea3",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.671816, -23.529374]
+			},
+			"name": "ALAPark",
+			"bandeira": null,
+			"address": "R. Dona Germaine Burchard, 323 - Água Branca, São Paulo - SP, 05002-061, Brazil",
+			"phone": "(11) 3862-1117",
+			"site": "https://www.alapark.com.br/",
+			"qtdVagas": 30,
+			"observacoes": "Os 13 primeiros podem levar a chave.",
+			"destacado": true,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": true,
+			"proprietarioConhecido": true,
+			"photo1": "https://s3-sa-east-1.amazonaws.com/coopark-prod/f9b84820-108b-45c4-b8d0-17eafaa1be99_0-eus-d4-99cf30bf86c85307cfc126ddfee11dce.jpg",
+			"prices": [{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 0
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 1
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 2
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 3
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 4
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 5
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 6
+				}
+			],
+			"openingHours": [{
+					"open": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 1,
+						"hours": 9,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 1,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 2,
+						"hours": 9,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 2,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 3,
+						"hours": 9,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 3,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 4,
+						"hours": 9,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 4,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 5,
+						"hours": 9,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 5,
+						"hours": 20,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 6,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 6,
+						"hours": 0,
+						"minutes": 0
+					}
+				}
+			],
+			"photos": [{
+					"id": "1d4cb7d9-42d5-459e-9584-32fd40605649",
+					"name": "f9b84820-108b-45c4-b8d0-17eafaa1be99_0-eus-d4-99cf30bf86c85307cfc126ddfee11dce.jpg",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/f9b84820-108b-45c4-b8d0-17eafaa1be99_0-eus-d4-99cf30bf86c85307cfc126ddfee11dce.jpg"
+				},
+				{
+					"id": "36898e47-9965-42c8-b411-130f5a5e291b",
+					"name": "3d9e4805-029f-4fe0-abe7-999c29e52662_0-eus-d4-99cf30bf86c85307cfc126ddfee11dce.jpg",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/3d9e4805-029f-4fe0-abe7-999c29e52662_0-eus-d4-99cf30bf86c85307cfc126ddfee11dce.jpg"
+				},
+				{
+					"id": "cadaffd5-2d01-41d8-9623-9aa0358ecf01",
+					"name": "8692aec1-c840-4c50-831c-f3773b3dd123_cópia de ALAPARK-small.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/8692aec1-c840-4c50-831c-f3773b3dd123_cópia de ALAPARK-small.png"
+				},
+				{
+					"id": "b387ffe4-3599-44f0-9aaf-2688a1acdfad",
+					"name": "f6e8c300-23b3-4631-abb4-01bcae885586_cópia de ALAPARK1small.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/f6e8c300-23b3-4631-abb4-01bcae885586_cópia de ALAPARK1small.png"
+				},
+				{
+					"id": "1fa3127f-795a-46fe-ad22-4b776e657534",
+					"name": "7b491e62-2d70-42d1-bc1b-1810d5642bd7_alaparkLOGO.jpg",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://s3-sa-east-1.amazonaws.com/coopark-prod/7b491e62-2d70-42d1-bc1b-1810d5642bd7_alaparkLOGO.jpg"
+				}
+			],
+			"eventos": [{
+					"eventoDiaId": 43,
+					"valorDia": 25.0,
+					"qtdVagas": 0,
+					"dataHoraInicioEstacionamento": "2018-04-11T20:00:00Z",
+					"dataHoraFimEstacionamento": "2018-04-12T00:15:00Z"
+				},
+				{
+					"eventoDiaId": 38,
+					"valorDia": 50.0,
+					"qtdVagas": 30,
+					"dataHoraInicioEstacionamento": "2018-04-15T14:00:00Z",
+					"dataHoraFimEstacionamento": "2018-04-16T00:30:00Z"
+				},
+				{
+					"eventoDiaId": 41,
+					"valorDia": 40.0,
+					"qtdVagas": 30,
+					"dataHoraInicioEstacionamento": "2018-04-22T12:00:00Z",
+					"dataHoraFimEstacionamento": "2018-04-23T00:00:00Z"
+				},
+				{
+					"eventoDiaId": 44,
+					"valorDia": 40.0,
+					"qtdVagas": 30,
+					"dataHoraInicioEstacionamento": "2018-05-05T11:00:00Z",
+					"dataHoraFimEstacionamento": "2018-05-06T03:00:00Z"
+				},
+				{
+					"eventoDiaId": 53,
+					"valorDia": 45.0,
+					"qtdVagas": 30,
+					"dataHoraInicioEstacionamento": "2018-10-09T19:00:00Z",
+					"dataHoraFimEstacionamento": "2018-10-10T00:00:00Z"
+				}
+			],
+			"rating": 0
+		},
+		{
+			"id": "5ada05332906f31ab8cb727e",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.6762165, -23.5304766]
+			},
+			"name": "Gaby Estacionamento ",
+			"bandeira": null,
+			"address": "Rua Turiassú, 1409 - Perdizes, São Paulo - SP, 05005-001, Brasil",
+			"phone": null,
+			"site": null,
+			"qtdVagas": null,
+			"observacoes": null,
+			"destacado": false,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": false,
+			"proprietarioConhecido": true,
+			"photo1": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/12dae39b-f4c7-4120-b58c-2e3fee02c283_Captura de Tela 2018-04-20 às 11.50.08.png",
+			"prices": [{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 0
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 1
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 2
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 3
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 4
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 5
+				},
+				{
+					"id": null,
+					"meiaHora": 0.0,
+					"primeiraHora": 0.0,
+					"segundaHora": 0.0,
+					"terceiraHora": 0.0,
+					"quartaHora": 0.0,
+					"quintaHora": 0.0,
+					"sextaHora": 0.0,
+					"setimaHora": 0.0,
+					"oitavaHora": 0.0,
+					"diaria": 0.0,
+					"mensal": 0.0,
+					"diaSemana": 6
+				}
+			],
+			"openingHours": [{
+					"open": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 0,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 1,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 1,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 2,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 2,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 3,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 3,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 4,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 4,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 5,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 5,
+						"hours": 0,
+						"minutes": 0
+					}
+				},
+				{
+					"open": {
+						"dayOfWeek": 6,
+						"hours": 0,
+						"minutes": 0
+					},
+					"close": {
+						"dayOfWeek": 6,
+						"hours": 0,
+						"minutes": 0
+					}
+				}
+			],
+			"photos": [{
+					"id": "d36024b3-bbfe-41cf-9b74-349f8747ea1d",
+					"name": "5ea87560-1629-461f-ab45-905170d9aa1c_Captura de Tela 2018-04-20 às 11.50.08.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/5ea87560-1629-461f-ab45-905170d9aa1c_Captura de Tela 2018-04-20 às 11.50.08.png"
+				},
+				{
+					"id": "b1b1533e-2f94-4ad4-990e-384a34a9880c",
+					"name": "12dae39b-f4c7-4120-b58c-2e3fee02c283_Captura de Tela 2018-04-20 às 11.50.08.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/12dae39b-f4c7-4120-b58c-2e3fee02c283_Captura de Tela 2018-04-20 às 11.50.08.png"
+				},
+				{
+					"id": "4c0cc434-ec03-4f27-91c4-750387d89518",
+					"name": "1d97d5dc-e56d-44e8-86be-3ff0775abb97_Captura de Tela 2018-04-20 às 11.49.36.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/1d97d5dc-e56d-44e8-86be-3ff0775abb97_Captura de Tela 2018-04-20 às 11.49.36.png"
+				},
+				{
+					"id": "34d3a440-0acb-406b-b8fe-bbdbecc78456",
+					"name": "d01f6a17-9264-41ca-acfb-8ec46e44bdae_Captura de Tela 2018-04-20 às 11.49.36.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/d01f6a17-9264-41ca-acfb-8ec46e44bdae_Captura de Tela 2018-04-20 às 11.49.36.png"
+				},
+				{
+					"id": "dd12a311-5578-499f-acca-922193fee662",
+					"name": "308aecf7-8aac-4015-9cdd-96550ddcc9ca_Captura de Tela 2018-04-20 às 11.49.36.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/308aecf7-8aac-4015-9cdd-96550ddcc9ca_Captura de Tela 2018-04-20 às 11.49.36.png"
+				},
+				{
+					"id": "0ee7477d-27f3-4dd1-9a47-16db021b1a4b",
+					"name": "5367114a-6068-4828-95a8-a6f44f5f8e69_Captura de Tela 2018-04-20 às 11.49.36.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/5367114a-6068-4828-95a8-a6f44f5f8e69_Captura de Tela 2018-04-20 às 11.49.36.png"
+				},
+				{
+					"id": "41dc6f9f-65c3-40ff-be7f-92e019566b52",
+					"name": "deb995bc-b3bc-4525-90b0-f48223b5a60c_Captura de Tela 2018-04-20 às 11.49.36.png",
+					"descricao": "",
+					"path": null,
+					"source": null,
+					"url": "https://d3u6n3utba2ubs.cloudfront.net/Estacionamentos/deb995bc-b3bc-4525-90b0-f48223b5a60c_Captura de Tela 2018-04-20 às 11.49.36.png"
+				}
+			],
+			"eventos": null,
+			"rating": 0
+		},
+		{
+			"id": "5a9edf9373ebe70ea87bbe9c",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.673371400000008, -23.5259776]
+			},
+			"name": "Maxipark Tok&Stok Pompéia",
+			"bandeira": "",
+			"address": "Av. Francisco Matarazzo,, 1090 - Parque Industrial Tomas Edson, São Paulo - SP, 05001-200, Brazil",
+			"phone": null,
+			"site": null,
+			"qtdVagas": 0,
+			"observacoes": "",
+			"destacado": false,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": false,
+			"proprietarioConhecido": false,
+			"photo1": "https://maps.googleapis.com/maps/api/streetview?size=420x420&location=-23.5259776,-46.6733714&heading=280&pitch=-0.76",
+			"prices": [],
+			"openingHours": [],
+			"photos": [],
+			"eventos": null,
+			"rating": 0
+		},
+		{
+			"id": "5a6639e964aee05ea00c7ed6",
+			"location": {
+				"type": "Point",
+				"coordinates": [-46.676463099999992, -23.5235141]
+			},
+			"name": "Estacionamento Trevo",
+			"bandeira": "",
+			"address": "Parque Industrial Tomás Edson, São Paulo - State of São Paulo, 01142-000, Brazil",
+			"phone": null,
+			"site": "http://www.estacionamentostrevo.com.br/",
+			"qtdVagas": 0,
+			"observacoes": "",
+			"destacado": false,
+			"aceitaReserva": false,
+			"aceitaReservaEventos": false,
+			"proprietarioConhecido": false,
+			"photo1": "https://maps.googleapis.com/maps/api/streetview?size=420x420&location=-23.5235141,-46.6764631&heading=280&pitch=-0.76",
+			"prices": [],
+			"openingHours": [],
+			"photos": [],
+			"eventos": null,
+			"rating": 0
+		}
+	]
+}
