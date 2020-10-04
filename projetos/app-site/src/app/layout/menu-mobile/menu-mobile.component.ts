@@ -9,7 +9,10 @@ import { NavController, NavParams
   styleUrls: ['./menu-mobile.component.scss'],
 })
 export class MenuMobileComponent {
-
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
   constructor(
     public navParams: NavParams,
     public modal: ModalController,

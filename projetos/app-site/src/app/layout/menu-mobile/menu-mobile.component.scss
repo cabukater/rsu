@@ -67,7 +67,7 @@ button.btn-logout {
  .bg-map{
   // background-image: url('../../assets/img/mapa.png');
    background-size: cover;
-   min-height:120px ; 
+   min-height:230px ; 
 
  }
   .toolbar-content {
@@ -102,4 +102,9 @@ button.btn-logout {
   }
   .toolbar-background-md {
     background-color: transparent;
+  }
+
+  .logo{
+    max-width: 250px;
+    margin: 0 auto;
   }

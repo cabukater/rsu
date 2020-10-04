@@ -4,12 +4,16 @@ import { MenuDesktopComponent } from './menu-desktop/menu-desktop.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { FooterDesktopComponent } from './footer-desktop/footer-desktop.component';
+import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 
 @NgModule({
   declarations: [
     HeaderMobileComponent,
     MenuDesktopComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    FooterDesktopComponent,
+    FooterMobileComponent,
   ],
   imports: [
     CommonModule,
@@ -18,11 +22,15 @@ import { IonicModule } from '@ionic/angular';
   entryComponents : [
     MenuDesktopComponent,
     HeaderMobileComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    FooterDesktopComponent,
+    FooterMobileComponent,
   ], exports :[
     MenuDesktopComponent,
     HeaderMobileComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    FooterDesktopComponent,
+    FooterMobileComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

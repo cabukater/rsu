@@ -1,3 +1,4 @@
+import { ComponentsDesktopModule } from './components-desktop/components-desktop.module';
 import { LayoutModule } from './layout/layout.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,14 +16,16 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
+
 library.add(fas,far,fab)// add all icons
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ],
   entryComponents: [],
   imports: [
     BrowserModule,
     LayoutModule,
     FontAwesomeModule,
+    ComponentsDesktopModule,
     IonicModule.forRoot(),
     AppRoutingModule],
   providers: [

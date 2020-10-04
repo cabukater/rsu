@@ -1,29 +1,47 @@
-
-  <ion-row>
-    <ion-col col-4>
+<ion-grid fixed>
+     <ion-row>
+    <ion-col size="3">
        <img src="assets/img/logo.png" class="logo-desktop">
     </ion-col>
-    <ion-col col-8>
+    <ion-col size="9">
        <ion-row>
           <ion-col col-2 text-center>
-             <p navPush="EstacionarPage"> Estacionar</p>
-          </ion-col>
+             <p navPush="EstacionarPage">
+                  <a color="secondary">
+               <i class="far fa-building"></i> História
+              </a>
+            </p>
+         
+            </ion-col>
           <ion-col col-2  text-center>
-             <p navPush="CheckPage">Checkin</p>
-          </ion-col>
+            <p navPush="CheckPage"> 
+              <a color="secondary">   <i class="fas fa-solar-panel"></i>
+               Painéis Solares</a></p>
+         </ion-col>
+         <ion-col col-2  text-center>
+            <p navPush="CheckPage">
+                 <a color="secondary"><i class="far fa-lightbulb"></i>
+               Iluminação Prof.
+            </a></p>
+         </ion-col>
+         <ion-col col-2  text-center>
+            <p navPush="CheckPage">
+                 <a color="secondary">
+               <i class="fas fa-tools"></i>
+               Outros Serviços
+            </a></p>
+         </ion-col>
           <ion-col col-2  text-center>
-             <p navPush="AtivoPage">Ativos</p>
+             <p navPush="AtivoPage">
+                  <a color="secondary">
+               <i class="fas fa-headset"></i> 
+               Fale Conosco
+            </a></p>
           </ion-col>
-          <ion-col col-2  text-center>
-             <p navPush="HistoricoPage">Histórico</p>
-          </ion-col>
-          <ion-col col-2  text-center>
-             <p navPush="CheckPage">Seja Parceiro</p>
-          </ion-col>
-          <ion-col col-2 text-center >
-             <p navPush="CheckPage"> Sair</p>
-          </ion-col>
-       </ion-row>
+      </ion-row>
     </ion-col>
  </ion-row>
+</ion-grid>
+ 
+ 
 

@@ -5,11 +5,12 @@
     </ion-toolbar>
     <app-header-mobile [hidden]="screen != 'mobile'" (window:resize)="onResize($event)"></app-header-mobile>
   </ion-header>
+  
 <ion-content>
    <router-outlet ></router-outlet>
 </ion-content>
-<ion-footer class="shadow-top" [hidden]="screen != 'mobile'" (window:resize)="onResize($event)">
- 
+<ion-footer class="shadow-top">
+  <app-footer-desktop> </app-footer-desktop>
 </ion-footer>
 
 </ion-app>

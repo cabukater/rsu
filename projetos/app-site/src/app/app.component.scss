@@ -1,5 +1,5 @@
 @import '../theme/variables.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 $grid-breakpoints: ( 
 xs: 0, // Phone (0px - 575px)
 sm: 576px, // Phablet (576px - 767px)
@@ -8,31 +8,13 @@ lg: 992px // Tablet horizontal, Desktop (992px and above)
 );
 $grid-max-widths: ( lg: 992px);
 
-@font-face {
-    font-family: 'lato-light';
-    src: url('/assets/fonts/lato/lato-light.woff') format("woff");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: 'lato-regular';
-    src: url('../assets/fonts/lato/lato-regular.woff') format("woff");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: 'lato-bold';
-    src: url('../assets/fonts/lato/lato-bold.woff') format("woff");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
   header {
     background-color: #fff;
   }
   
+  body{
+    font-family: 'Raleway', sans-serif;
+  }
   /*TEXT*/
   
   .title {
@@ -42,19 +24,19 @@ $grid-max-widths: ( lg: 992px);
   .title-1 {
     font-size: 16px;
     //// color: color($colors, title);
-    font-family: 'lato-bold';
+    font-family: 'Raleway', sans-serif;
     margin: 0
   }
   
   .title-2 {
     font-size: 14px !important;
-    font-family: 'lato';
+    font-family: 'Raleway', sans-serif;
    // color: color($colors, ;
   }
   
   .title-3 {
     font-size: 14px !important;
-    font-family: 'lato-light';
+    font-family: 'Raleway', sans-serif;
     // color: color($colors, title);
   }
   
@@ -201,143 +183,6 @@ $grid-max-widths: ( lg: 992px);
   
   .shadow-bottom {
     box-shadow: 5px 31px 69px -12px rgba(0, 0, 0, 0.21);
-  }
-  
-  /*ICONS NÃO DISPONIVEIS NO FONTAWSOME OU IONIC ICONS*/
-  
-  .fa-coopark {
-    content: url('../assets/icon/coopark.svg');
-    width: 100%;
-  }
-  
-  .fa-garage {
-    content: url('../assets/icon/garage.svg');
-    width: 100%;
-  }
-  
-  .fa-wash {
-    content: url('../assets/icon/car-wash.svg');
-    width: 100%;
-  }
-  
-  .fa-valet {
-    content: url('../assets/icon/valet.svg');
-    width: 100%;
-  }
-  
-  .fa-restroom {
-    content: url('../assets/icon/restroom.svg');
-    width: 100%;
-  }
-  
-  .fa-park {
-    content: url('../assets/icon/park.svg');
-    width: 100%;
-  }
-  
-  .fa-parking {
-    content: url('../assets/icon/parking.svg');
-    width: 100%;
-  }
-  
-  .fa-parking-1 {
-    content: url('../assets/icon/parking-1.svg');
-    width: 100%;
-  }
-  
-  .fa-faq {
-    content: url('../assets/icon/faq.svg');
-    width: 100%;
-  }
-  
-  .fa-help {
-    content: url('../assets/icon/help.svg');
-    width: 100%;
-  }
-  
-  .fa-checkin {
-    content: url('../assets/icon/check.svg');
-    width: 100%;
-  }
-  
-  .fa-car {
-    content: url('../assets/icon/car.svg');
-    width: 100%;
-  }
-  
-  .fa-call {
-    content: url('../assets/icon/call.svg');
-    width: 100%;
-  }
-  
-  .fa-history {
-    content: url('../assets/icon/history.svg');
-    width: 100%;
-  }
-  
-  .fa-clock {
-    content: url('../assets/icon/clock.svg');
-    width: 100%;
-  }
-  
-  .fa-terms {
-    content: url('../assets/icon/terms.svg');
-    width: 100%;
-  }
-  
-  .fa-logout {
-    content: url('/assets/icon/logout.svg');
-    width: 100%;
-  }
-  
-  .fa-faq {
-    content: url('/assets/icon/faq.svg');
-    width: 100%;
-  }
-  
-  .fa-barcode {
-    content: url('../assets/icon/barcode.svg');
-    width: 100%;
-  }
-  
-  .fa-ticket {
-    content: url('../assets/icon/tickets.svg');
-    width: 100%;
-  }
-  
-  .fa-card {
-    content: url('../assets/icon/cards.svg');
-    width: 100%;
-  }
-  
-  .fa-visa {
-    content: url('../assets/icon/visa.svg');
-    width: 100%;
-  }
-  
-  .fa-mastercard {
-    content: url('../assets/icon/mastercard.svg');
-    width: 100%;
-  }
-  
-  .fa-driver {
-    content: url('../assets/icon/driver.svg');
-    width: 100%;
-  }
-  
-  .fa-user {
-    content: url('../assets/icon/user.svg');
-    width: 100%;
-  }
-  
-  .fa-testimonials{
-    content: url('../assets/icon/testimonials.svg');
-    width: 100%;
-  }
-  
-  .fa-event {
-    content: url('../assets/icon/event.svg');
-    width: 100%;
   }
   
   /*TAMANHO ICONES*/
@@ -767,3 +612,17 @@ $grid-max-widths: ( lg: 992px);
     padding: 5px;
     border-radius: 4px;
   }
+
+  ion-footer{
+    background-color:  map-get($colors, secondary)
+  }
+
+  //@at-root
+  app-carousel-boxes{
+    margin-top: var(--ion-margin, 160px)
+  }
+
+  section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

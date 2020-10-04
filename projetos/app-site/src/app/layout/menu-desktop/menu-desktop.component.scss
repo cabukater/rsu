@@ -6,7 +6,15 @@ menu-desktop {
     }
   
   }
+
+  a{
+    color: var(--ion-color-secondary);
+  }
   .logo-desktop{
     max-width: 150px;    
     margin-top: 10px;
+  }
+
+  ion-grid{
+      max-width: 1366px;
   }

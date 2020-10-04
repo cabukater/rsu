@@ -1,28 +1,22 @@
-<ion-header>
-  <ion-toolbar hideBackButton>
-     <ion-title></ion-title>
-     <ion-row>
-        <ion-col col col-12 text-center no-margin no-padding>
-           <img src="assets/img/logo.png" class="logo-menu">
-        </ion-col>
-     </ion-row>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content>
   <ion-grid no-margin no-padding>
-     <ion-row class="bg-map" navPush="EstacionarPage">
-        <ion-col col-8 text-left>
-           <h1 class="light-font title-1" padding margin-top>Saiba onde estacionar mais
-              próximo de seu<br> <span class="bold-font"> destino</span>
-           </h1>
-        </ion-col>
-        <ion-col col-4 text-right>
-           <i class="fas fa-solar-panel" padding></i>
-        </ion-col>
-     </ion-row>
+     <ion-row class="bg-map" navPush="EstacionarPage" justify-content-center align-items-center >
+        <ion-col col-12 text-center class="ion-margin-horizontal">
+         
+          <ion-img  src="assets/img/logo.png" class="logo"></ion-img>
+
+         </ion-col>
+    </ion-row>
+
      <ion-row>
+      <ion-col>
+         <button navPush="VeiculosPage">
+          <i class="far fa-building"></i> História
+         </button>
+      </ion-col>
         <ion-col>
-           <button navPush="CheckPage">
+           <button navPush="ChecksPage">
             <i class="fas fa-solar-panel" padding></i>
 
            Painel Solar 
@@ -34,14 +28,16 @@
            Iluminação profissional
            </button>
         </ion-col>
-        <ion-col>
-           <button navPush="HistoricoPage">
-         <i class="fas fa-briefcase"></i>
-           Outros Serviços
-           </button>
-        </ion-col>
+       
      </ion-row>
      <ion-row>
+
+      <ion-col>
+         <button navPush="HistoricoPage">
+       <i class="fas fa-briefcase"></i>
+         Outros Serviços
+         </button>
+      </ion-col>
  
         <ion-col>
            <button navPush="TicketsPage">
@@ -55,16 +51,16 @@
            Contato 2
            </button>
         </ion-col>
-        <ion-col>
-          <button navPush="CardPage">
-          <i class="fab fa-whatsapp"></i>
-          Contato 3
-          </button>
-          
-       </ion-col>
+       
      </ion-row>
      <ion-row>
-     
+      <ion-col>
+         <button navPush="CardPage">
+         <i class="fab fa-whatsapp"></i>
+         Contato 3
+         </button>
+         
+      </ion-col>
         <ion-col>
           <button navPush="VeiculosPage">
           <i class="fab fa-facebook"></i>
