@@ -17,7 +17,7 @@ export class MenuMobileComponent {
     public navParams: NavParams,
     public modal: ModalController,
     public alertCtrl: AlertController,
-   
+
   ) { }
 
   // tslint:disable-next-line: use-lifecycle-interface

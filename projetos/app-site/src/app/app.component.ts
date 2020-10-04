@@ -12,7 +12,7 @@ import { MenuMobileComponent } from './layout/menu-mobile/menu-mobile.component'
 })
 export class AppComponent {
   screen: string;
- 
+
   constructor(
     public navCtrl: NavController,
     private platform: Platform,
@@ -20,7 +20,7 @@ export class AppComponent {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
-    this.checkScreen()
+    this.checkScreen();
   }
 
   initializeApp() {
@@ -33,18 +33,18 @@ export class AppComponent {
   checkScreen() {
     this.platform.ready().then(readySource => {
       if (this.platform.width() >= 768) {
-        this.screen = "desktop";
-      
-        console.log('ass vezea')
+        this.screen = 'desktop';
+
+        console.log('ass vezea');
       } else {
-        this.screen = "mobile";
-         console.log('menos')
+        this.screen = 'mobile';
+        console.log('menos');
       }
     });
   }
 
   onResize(event) {
-   this.checkScreen()
+   this.checkScreen();
   }
 
   openMenuMobile() {

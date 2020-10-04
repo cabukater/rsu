@@ -16,8 +16,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
+library.add(fas, far, fab); // add all icons
 
-library.add(fas,far,fab)// add all icons
 @NgModule({
   declarations: [AppComponent, ],
   entryComponents: [],

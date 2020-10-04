@@ -25,7 +25,7 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     MenuMobileComponent,
     FooterDesktopComponent,
     FooterMobileComponent,
-  ], exports :[
+  ], exports : [
     MenuDesktopComponent,
     HeaderMobileComponent,
     MenuMobileComponent,

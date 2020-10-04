@@ -13,7 +13,7 @@ import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
     CommonModule,
     IonicModule,
   ],
-  entryComponents:[
+  entryComponents: [
     CarouselBoxesComponent,
     MapaFormComponent
   ],

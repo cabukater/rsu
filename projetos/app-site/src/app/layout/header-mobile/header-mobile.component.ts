@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ModalController, NavController, NavParams } from '@ionic/angular';
-import {MenuMobileComponent} from '../menu-mobile/menu-mobile.component'
+import {MenuMobileComponent} from '../menu-mobile/menu-mobile.component';
 @Component({
   selector: 'app-header-mobile',
   templateUrl: './header-mobile.component.html',
@@ -15,7 +15,7 @@ export class HeaderMobileComponent  {
     private modalCtrl: ModalController,
   ) {
     console.log('Hello HeaderMobileComponent Component');
-   
+
   }
 
   async  openMenuMobile() {
@@ -23,7 +23,7 @@ export class HeaderMobileComponent  {
       component: MenuMobileComponent
   });
 
-  modal.present();
+    modal.present();
   }
 
 }
