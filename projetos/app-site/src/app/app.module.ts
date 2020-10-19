@@ -15,6 +15,10 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+//import { AngularFireModule } from '@angular/fire';
+//import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {  environment  } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 library.add(fas, far, fab); // add all icons
 
@@ -26,8 +30,12 @@ library.add(fas, far, fab); // add all icons
     LayoutModule,
     FontAwesomeModule,
     ComponentsDesktopModule,
+   // AngularFireModule.initializeApp(firebase),
+    //AngularFireDatabaseModule,
     IonicModule.forRoot(),
-    AppRoutingModule],
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+],
   providers: [
     StatusBar,
     NavParams,
