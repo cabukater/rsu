@@ -34,3 +34,13 @@ body{
     background-image: url('./assets/img/pattern1.jpg');
     background-attachment: fixed;
 }
+
+/* All delay classes will take 2x longer to start */
+:root {
+    --animate-delay: 2s;
+  }
+  
+  /* All delay classes will take half the time to start */
+  :root {
+    --animate-delay: 0.5s;
+  }

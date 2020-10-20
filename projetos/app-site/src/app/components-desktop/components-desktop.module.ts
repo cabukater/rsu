@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselBoxesComponent } from './carousel-boxes/carousel-boxes.component';
 import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
     CarouselBoxesComponent,
-    MapaFormComponent
+    MapaFormComponent,
+        CalculatorComponent,
   ],
   imports: [
     CommonModule,
@@ -15,11 +17,13 @@ import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
   ],
   entryComponents: [
     CarouselBoxesComponent,
+    CalculatorComponent,
     MapaFormComponent
   ],
    exports: [
     CarouselBoxesComponent,
-    MapaFormComponent
+    MapaFormComponent,
+    CalculatorComponent,
   ]
 })
 export class ComponentsDesktopModule { }

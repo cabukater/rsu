@@ -19,16 +19,19 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 //import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {  environment  } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { HttpClientModule } from '@angular/common/http';
 
 library.add(fas, far, fab); // add all icons
 
 @NgModule({
   declarations: [AppComponent, ],
-  entryComponents: [],
+
   imports: [
     BrowserModule,
+    HttpClientModule,
     LayoutModule,
     FontAwesomeModule,
+
     ComponentsDesktopModule,
    // AngularFireModule.initializeApp(firebase),
     //AngularFireDatabaseModule,
@@ -42,8 +45,8 @@ library.add(fas, far, fab); // add all icons
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
+ 
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule {}

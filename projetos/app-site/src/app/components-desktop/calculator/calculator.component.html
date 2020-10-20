@@ -1,0 +1,671 @@
+<div id="simulador-formulario" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_2">
+				
+				
+  <div class="et_pb_text_inner">
+    <form name="entrada" action="javascript:;" onsubmit="camposVazios();">
+<p>
+<label for="class">Classificação:</label><br>
+<select id="class"><option value="25">Residencial</option><option value="00">Rural</option><option value="18">Comercial/Industrial</option></select>
+</p>
+<p>
+<label for="ligacao">Tipo de ligação:</label><br>
+<select id="ligacao"><option value="100">Trifásica</option><option value="050">Bifásica</option><option value="030">Monofásica</option></select>
+</p>
+<p>
+<label for="conta">Preço da sua conta de luz (R$):</label><br>
+<input type="number" id="conta" name="conta" placeholder="ex: 450">
+</p>
+</form>
+  </div>
+</div>
+
+
+<div id="et-main-area">
+
+	<div id="main-content">
+	
+	
+				
+					<article id="post-52856" class="post-52856 page type-page status-publish hentry">
+	
+					
+						<div class="entry-content">
+						<div class="et_pb_section  et_pb_section_0 et_pb_with_background et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_0">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_0">
+					
+					
+					<div class="et_pb_text_inner">
+						<h3 class="simulador-resumo" onload="simuladorSolar()">RESULTADO</h3>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_1 et_pb_row_4col">
+					<div class="et_pb_column et_pb_column_1_4  et_pb_column_1 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_1">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Economia em 25 anos</p>
+	<p>R$ {{ ec25Anospv }}</p></div>
+				</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_2">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Economia anual</p>
+	<p id="ecAnualpv">R$&nbsp;2.400,16</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_4  et_pb_column_2 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_3">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Quantidade de placas (de 400W)</p>
+	<p id="qntdModulosp">8</p></div>
+				</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_4">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Potência total</p>
+	<p id="potTotalp">3.20 kWp</p></div>
+				</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_5">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Produção anual</p>
+	<p id="prodAnualp">4476 kWh</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_4  et_pb_column_3 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_6">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Conta de energia (antes)</p>
+	<p id="contaSemSolarpv">R$&nbsp;256,00</p></div>
+				</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_7">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Conta de energia (depois)</p>
+	<p id="contaMinimap">R$&nbsp;55,99</p></div>
+				</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_8">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Redução de</p>
+	<p id="porcentReducaopv">78%</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_4  et_pb_column_4 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left simulador-resultado et_pb_text_9">
+					
+					
+					<div class="et_pb_text_inner">
+						<p class="simulador-resumo">Faixa de preços</p>
+	<p id="faixaPrecop">R$&nbsp;15.725,60 a R$&nbsp;24.670,85</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_2">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_5 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_6 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div class="et_pb_button_module_wrapper et_pb_module et_pb_button_alignment_center">
+					<a class="et_pb_button et_pb_custom_button_icon zoom et_pb_button_0 et_pb_module et_pb_bg_layout_light" href="https://npenergiasolar.com.br/simulador-energia-solar/" data-icon="">SIMULAR DE NOVO</a>
+				</div>
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_7 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_1 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_3">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_10">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t2">Quais os principais benefícios de ter um solar?</p>
+	<p>Os benefícios vão <u>muito além</u> de uma conta de luz mais barata.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_4">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_9 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_11">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2019/01/energia-solar-inflacao.png" class="beneficios"></p>
+	<p class="beneficios">Proteção contra o aumento na tarifa</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_10 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_12">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2019/01/energia-solar-rentabilidade.png" class="beneficios"></p>
+	<p class="beneficios">Seu dinheiro rendendo com risco zero</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_11 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_13">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2019/01/energia-solar-valorizacao.png" class="beneficios"></p>
+	<p class="beneficios">Valorização imediata do seu imóvel</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_5">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_12 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_14">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2019/01/energia-solar-garantia.png" class="beneficios"></p>
+	<p class="beneficios">25 anos de economia garantida</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_13 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_15">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2020/04/mundo-melhor.png" class="beneficios"></p>
+	<p class="beneficios">Um mundo melhor para seus filhos e netos</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_14 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="beneficios" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_16">
+					
+					
+					<div class="et_pb_text_inner">
+						<p><img src="https://npenergiasolar.com.br/wp-content/uploads/2020/04/amizade.png" class="beneficios"></p>
+	<p class="beneficios">Você bem reconhecido no seu ciclo de amigos</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_2 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_6">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_15 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_17">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t2">Quanto vou economizar com esse sistema?</p>
+	<p>O conceito é bem simples: você produz energia e compra menos da distribuidora.</p>
+	<p>O sol é de graça, então você ganha dinheiro nesse processo.</p>
+	<p>Como a garantia dos geradores é de 25 anos, esse é o tempo que você tem de economia garantida.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_7">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_16 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_18">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">ECONOMIA NO 1º MÊS</p>
+	<p id="ecMensal-p-v">R$&nbsp;200,01</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_17 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_19">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">ECONOMIA EM 1 ANO</p>
+	<p id="ecAnual-p-v">R$&nbsp;2.400,16</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_18 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_20">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">ECONOMIA EM 25 ANOS</p>
+	<p id="ec25Anos-p-v">R$&nbsp;130.984,06</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_3 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_8">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_19 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_21">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t1">Quanto vou pagar de conta de energia?</p>
+	<p>O sistema solar praticamente congela o valor da conta de luz.</p>
+	<p>Pelos próximos 25 anos você não vai mais se preocupar quando o preço da energia subir.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_9">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_20 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_22">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">CONTA DE ENERGIA (ANTES)</p>
+	<p id="contaSemSolar-p-v">R$&nbsp;256,00</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_21 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_23">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">CONTA DE ENERGIA (DEPOIS)</p>
+	<p id="contaMinima-p">R$&nbsp;55,99</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_22 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_24">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">REDUÇÃO DE</p>
+	<p id="porcentReducao-p-v">78%</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_4 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_10">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_23 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_25">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t2">Qual será o resultado do meu investimento em 25 anos?</p>
+	<p>Seu dinheiro rende muito mais no solar do que em outros aplicações financeiras (<u>cerca de 5x mais do que a poupança</u>).</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_11">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_24 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_26">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">POUPANÇA</p>
+	<p id="valorfinalPoup-p-v">R$&nbsp;34.442,53</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_25 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_27">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">TESOURO SELIC</p>
+	<p id="valorfinalTesouro-p-v">R$&nbsp;39.681,51</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_26 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_28">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">SOLAR FOTOVOLTAICO</p>
+	<p id="valorfinalSolar-p">R$&nbsp;104.113,06</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_5 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_12">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_27 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_29">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t2">Quanto de energia esse sistema vai produzir?</p>
+	<p>Hoje não é permitido vender a energia que você produz, mas sim utilizá-la para abater a energia que você consome.</p>
+	<p>A cada 1 kWh que você produz, você abate 1 kWh na conta de luz.</p>
+	<p>Isso significa que existe uma quantidade <u>ideal máxima</u> de energia a ser produzida.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_13">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_28 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_30">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">SEU CONSUMO É</p>
+	<p id="consumo-p">457 kWh</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_29 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_31">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">É POSSÍVEL ABATER</p>
+	<p id="abativel-p">357 kWh</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_30 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_32">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">VOCÊ VAI PRODUZIR</p>
+	<p id="prodMensal-p">373 kWh</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_6 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_14">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_31 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_33">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t1">Quantas placas são necessárias?</p>
+	<p>Aqui vale destacar um ponto importante: a quantidade de placas é uma informação incompleta sobre o sistema.</p>
+	<p>Dependendo do modelo, 10 placas produzem mais energia do que outras 15 placas de potência menor.</p>
+	<p><u>O que importa é a potência total do sistema. É ela que dita quanta energia será produzida.</u></p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_15">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_32 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_34">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">NÚMERO DE PLACAS (400 WP)</p>
+	<p id="qntdModulos-p">8</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_33 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_35">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">POTÊNCIA DO SISTEMA</p>
+	<p id="potTotal-p">3.20 kWp</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_34 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_36">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">ÁREA OCUPADA</p>
+	<p id="area-p">16 m²</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_7 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_16">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_35 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_37">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t1">Quanto vale a energia que vou produzir?</p>
+	<p>Ao contrário do que muita gente pensa, a energia que você gera <u>não tem o mesmo valor final</u> da energia que você compra.</p>
+	<p>Isso acontece porque o ICMS não é devolvido em sua totalidade.</p>
+	<p>Utilizar o valor de compra para calcular o retorno financeiro é um erro muito comum e que altera totalmente a realidade dos resultados.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_17">
+					<div class="et_pb_column et_pb_column_1_2  et_pb_column_36 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_38">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">COMPRADA</p>
+	<p id="tarifaComICMS-p">R$&nbsp;0,56</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2  et_pb_column_37 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_39">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">GERADA (MÉDIA)</p>
+	<p id="tarGer-p-v">R$&nbsp;0,56</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_8 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_18">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_38 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_40">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t1">Quanto custa o sistema solar completo?</p>
+	<p>A faixa de preços apresentada abaixo é bastante confiável, retirada de relatórios da maior consultora de microgeração do país (Greener).</p>
+	<p><u>Tome muito cuidado com soluções com valores fora dessa faixa.</u></p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_19">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_39 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div id="blurb" class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-simulador et_pb_text_41">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-r">FAIXA DE PREÇOS</p>
+	<p id="faixaPreco-p">R$&nbsp;15.725,60 a R$&nbsp;24.670,85</p></div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_9 et_section_regular">
+					
+					
+					
+						<div class=" et_pb_row et_pb_row_20">
+					<div class="et_pb_column et_pb_column_4_4  et_pb_column_40 et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left text-format1 et_pb_text_42">
+					
+					
+					<div class="et_pb_text_inner">
+						<p id="text-simulador-t2">Pronto para o próximo passo?</p>
+	<p>Solicite agora um atendimento pessoal.</p>
+	<p>Um de nossos especialistas entrará em contato para te ajudar a resolver esse problema de uma vez por todas.</p>
+					</div>
+				</div> <!-- .et_pb_text -->
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_21">
+					<div class="et_pb_column et_pb_column_1_3  et_pb_column_41 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_42 et_pb_css_mix_blend_mode_passthrough">
+					
+					
+					<div class="et_pb_button_module_wrapper et_pb_module et_pb_button_alignment_center">
+					<a class="et_pb_button et_pb_custom_button_icon zoom et_pb_button_1 et_pb_module et_pb_bg_layout_light" href="https://npenergiasolar.com.br/atendimento/" data-icon="">SOLICITAR ATENDIMENTO</a>
+				</div>
+				</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_43 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+					
+					
+					
+				</div> <!-- .et_pb_column -->
+					
+					
+				</div> <!-- .et_pb_row -->
+					
+				</div> <!-- .et_pb_section -->					</div> <!-- .entry-content -->
+	
+					
+					</article> <!-- .et_pb_post -->
+	
+				
+	
+	</div> <!-- #main-content -->
+	
+	
+				<footer id="main-footer">
+					
+	
+			
+					<div id="et-footer-nav">
+						<div class="container">
+							<ul id="menu-footer_menu" class="bottom-nav"><li id="menu-item-51746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51746"><a href="https://npenergiasolar.com.br/sobre/">Sobre nós</a></li>
+	<li id="menu-item-51747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51747"><a href="https://npenergiasolar.com.br/contato/">Contato</a></li>
+	</ul>					</div>
+					</div> <!-- #et-footer-nav -->
+	
+				
+					<div id="footer-bottom">
+						<div class="container clearfix"></div>
+					</div>
+				</footer> <!-- #main-footer -->
+			</div>
