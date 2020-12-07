@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,19 @@ export class HomePage {
     initialSlide: 1,
     speed: 400
   };
-  constructor() {}
+  constructor(
+    private router: Router
+
+  ) {}
+
+  painelSolar(){
+    this.router.navigate(['/painel-solar'])
+  }
+  iluminacaoProf(){
+    this.router.navigate(['/iluminacao-profissional'])
+  }
+  outrosServ(){
+    this.router.navigate(['/outros-servicos'])
+  }
 
 }

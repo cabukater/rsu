@@ -1,6 +1,9 @@
 
 @import '../../theme/variables.scss';
-
+app-home{
+  height: 100%;
+  overflow-y: scroll;
+}
 #container {
   text-align: center;
   position: absolute;

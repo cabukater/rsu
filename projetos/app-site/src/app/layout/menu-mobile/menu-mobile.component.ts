@@ -1,5 +1,6 @@
 
 import { Component, Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController, NavParams
   , AlertController,  ModalController } from '@ionic/angular';
 
@@ -17,23 +18,26 @@ export class MenuMobileComponent {
     public navParams: NavParams,
     public modal: ModalController,
     public alertCtrl: AlertController,
+    private router: Router
 
   ) { }
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit() {}
-
-  sair() {
-    const alert = this.alertCtrl.create({
-      message: 'Até Breve',
-
-      buttons: [{
-        text: 'ok'
-
-      }],
-
-    });
-    alert.finally();
+  quemSomos(){
+    this.router.navigate(['/quem-somos'])
   }
+painelSolar(){
+  this.router.navigate(['/painel-solar'])
+}
+iluminacaoProf(){
+  this.router.navigate(['/iluminacao-profissional'])
+}
+outrosServ(){
+  this.router.navigate(['/outros-servicos'])
+}
+contato(){
+  this.router.navigate(['/contato'])
+}
 
 }
