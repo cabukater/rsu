@@ -1,0 +1,156 @@
+<ion-grid>
+  <ion-row class="ion-padding">
+    <ion-col size="4">
+      <img src="assets/img/title.png">
+    </ion-col>
+    <ion-col>
+      <ion-text color="secondary">
+
+        <h2>Resultados</h2>
+        <p>Saiba em valores estimados o quanto custa e qual o retorno do investimento</p>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+
+  <ion-card class="results-box ion-padding">
+
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+
+        <h4>Orçamento Médio </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p> Minímo {{obj?.precoMinOrcamento}} máximo {{obj?.precoMaxOrcamento}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <hr>
+
+    <ion-row class="ion-padding-top ">
+      <ion-col size="2" class="vertical-align-content">
+        <img src="assets/img/img1.png" class="icon">
+
+      </ion-col>
+      <ion-col col size="10">
+        <h2>Retorno do Investimento</h2>
+        <p>Qual o valor de retorno desse investimento</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+        <h4>Economia mensal </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{obj?.valorEconomiaMensal}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="border">
+      <ion-col [hidden]="obj?.resultFinalInvestDez < 0">
+        <h4>Economia total acumulada em 10 anos </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{obj?.resultFinalInvestDez}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="border">
+      <ion-col size="12">
+        <h4>Resultado do investimento em 25 anos </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{obj?.resultFinalInvest}}</p>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="ion-padding-top">
+      <ion-col size="2">
+        <img src="assets/img/img3.png" class="icon">
+
+      </ion-col>
+      <ion-col col size="10">
+        <h2>Sistema Indicado</h2>
+        <p>Qual o sistema mais indicado para vocÊ</p>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+        <h4>Tamanho do Sistema </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{dados?.tamanhoSistema}} kWp</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+        <h4>Módulos e Área necessária </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{dados?.qtdModulos}}módulos e {{dados?.areaInstalacao}} m2</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+        <h4>Produção anual estimada </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{obj?.energiaGeradaAnual}} KWh</p>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="ion-padding-top ">
+
+      <ion-col size="2">
+        <img src="assets/img/img5.png" class="icon">
+
+      </ion-col>
+      <ion-col size="10">
+        <h2>Estimativa Ambiental</h2>
+        <p>Saiba o quanto você colabora com o meio ambiente</p>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="border">
+
+      <ion-col size="12" size-sm>
+        <h4>Redução de CO2 na atmosfera </h4>
+      </ion-col>
+      <ion-col size="12" size-sm>
+        <p>{{dados?.mReducaoCo}} toneladas de CO2 </p>
+
+      </ion-col>
+    </ion-row>
+    <ion-row class="border">
+      <ion-col size="12" size-sm>
+        <h4>Equivalente a árvores plantadas </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{dados?.mArvoresPlantadas}}árvores plantadas </p>
+      </ion-col>
+    </ion-row>
+    <ion-row  class="border">
+      <ion-col size="12" size-sm>
+        <h4>Equivalente a KM rodados de carro </h4>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <p>{{dados?.mCarroEletrico }} km </p>
+
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+</ion-grid>

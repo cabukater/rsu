@@ -35,6 +35,12 @@ body{
     background-attachment: fixed;
 }
 
+.bg-2{
+  --ion-background-color:#0c3d59;
+  background-color:#0c3d59;
+
+}
+
 /* All delay classes will take 2x longer to start */
 :root {
     --animate-delay: 2s;
