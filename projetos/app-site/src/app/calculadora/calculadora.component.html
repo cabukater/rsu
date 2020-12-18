@@ -3,45 +3,46 @@
 
   <ion-row class="ion-margin-horizontal">
     <ion-col>
-    <ion-text color="light">  <h2>Calcule Online</h2>
-      <p> Calcule o valor estimado de economia.</p>
+    <ion-text color="light"> 
+       <h2 class="title">Calcule <span class="white">Online</span></h2>
+      <p class="subtitle"> Saiba aqui  o valor estimado de custo e economia.</p>
     </ion-text>
     </ion-col>
   </ion-row>
   <form>   <ion-row class="ion-margin-horizontal">
             <ion-col size-md="3" size="12" class="ion-padding">
               <ion-text color="light"> 
-               <ion-label>Media</ion-label>
+               <ion-label>Média Mensal em Kwh</ion-label>
             </ion-text>
              <input type="number" id="kwh" pattern="[0-9]+"  (change)="onchangeValueMedia($event)"  required [(ngModel)]="kwhInput" name="kwhInput" class="form-control">
              <input type="hidden" value="testeinputhidden" id="metainput">
 
             </ion-col>
-            <ion-col size-md="2" size="12" class="ion-padding" [hidden]="!showEstados">
+            <ion-col size-md="2" size="12" class="ion-padding">
               <ion-text color="light"> 
                   <ion-label>Estado</ion-label>
                   </ion-text>
-             <select (change)="onSelectEstado($event)" class="form-control" id="estados"  >
+             <select (change)="onSelectEstado($event)" class="form-control" id="estados"   [disabled]="!showEstados">
                <option *ngFor="let estado of estados?.data"
                 [value]="estado.uf_nome">
                  {{estado.nome}}
                </option>
              </select>
             </ion-col>
-            <ion-col size-md="4" size="12" class="ion-padding" [hidden]="!showCidades">
+            <ion-col size-md="4" size="12" class="ion-padding">
               <ion-text color="light"> 
-                  <ion-label>Distribuidoras</ion-label>
+                  <ion-label>Companhia </ion-label>
                   </ion-text>
-              <select id="cidades" class="form-control" (change)="onSelectcidade($event)" [(ngModel)]="distribuidora" name="distribuidora">
-                <option *ngFor="let cidade of cidades" [value]="cidade.vlrTotaTRFConvencional" >
-                 {{cidade.sigDistribuidora}}
+              <select id="cidades" class="form-control" (change)="onSelectcidade($event)" [(ngModel)]="distribuidora" name="distribuidora" [disabled]="!showCidades">
+                <option *ngFor="let cidade of service.cidades" [value]="cidade.vlrTotaTRFConvencional" >
+                 {{cidade.sigDistribuidora}}                
                </option>
               </select>
             </ion-col>
             <ion-col size-md="3" size="12" class="ion-padding">           
-              <ion-button class="fluid ui big disabled primary button" (click)="getREsults()">
+              <button class="fluid ui big  action disabled primary button" (click)="getREsults()" >
                 Calcular
-              </ion-button>
+              </button>
             </ion-col>
           </ion-row>
           </form>

@@ -1,11 +1,10 @@
 import { CalculoFotoVoltaico } from './CalculoFotoVoltaico';
 import { CalculadoraService } from './calculadora.service';
 import { CalculadoraComponent } from './calculadora.component';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { IonicModule } from '@ionic/angular';
 
 @NgModule({
@@ -17,11 +16,14 @@ import { IonicModule } from '@ionic/angular';
     HttpClientModule,
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule.forRoot(),
     
   ],
   providers: [
     CalculadoraService
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   exports:[CalculadoraComponent],
 })

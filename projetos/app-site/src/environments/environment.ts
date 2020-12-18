@@ -7,13 +7,14 @@ export const environment = {
 };
 
 export const firebase = {
-  apiKey: "AIzaSyBCdj6zX4Y_D0bsddVodzqtwW5VoCjbp2w",
-  authDomain: "teste-5cda7.firebaseapp.com",
-  databaseURL: "https://teste-5cda7.firebaseio.com",
-  projectId: "teste-5cda7",
-  storageBucket: "teste-5cda7.appspot.com",
-  messagingSenderId: "411195736482",
-  appId: "1:411195736482:web:2e3a0b207a21fc36ab32fb"
+  apiKey: "AIzaSyBjo6UzYD4uggnTrwPg9agRkHDEwT5z_VE",
+  authDomain: "cidades-estados-71974.firebaseapp.com",
+  databaseURL: "https://cidades-estados-71974-default-rtdb.firebaseio.com",
+  projectId: "cidades-estados-71974",
+  storageBucket: "cidades-estados-71974.appspot.com",
+  messagingSenderId: "829171509664",
+  appId: "1:829171509664:web:8aa21e6a193e6ab1121cc5",
+  measurementId: "G-4FRX9697ZS"
 };
 /*
  * For easier debugging in development mode, you can import the following file

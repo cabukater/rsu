@@ -1,8 +1,11 @@
+import { async } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-
+import { AngularFireDatabase, AngularFireList, snapshotChanges } from 'angularfire2/database';
+import { map } from 'rxjs/operators';
+import { threadId } from 'worker_threads';
 export interface Estado{
         id: string;
         uf_codigo: string;
@@ -19,8 +22,11 @@ export interface Estado{
   providedIn: 'root'
 })
 export class CalculadoraService {
-
+  teste: any;
+  cidades: any[] = [];
+  cidadesRef: AngularFireList<any>;
   constructor(
+    private firebase: AngularFireDatabase,
     private http : HttpClient
   ) { }
 
@@ -29,6 +35,16 @@ export class CalculadoraService {
    }
 
    getCidades(uf){
-     return this.http.get('http://localhost:3000/data?sigUF='+ uf).pipe()
-   }
+      
+     //return this.http.get('http://cidades-estados-71974-default-rtdb.firebaseio.com/data?sigUF='+ uf).pipe(
+      this.cidadesRef = this.firebase.list('/data', ref => ref
+      .orderByChild('sigUF')
+      .equalTo(uf));
+     this.cidadesRef
+    .snapshotChanges().subscribe((res) => {
+    this.cidades = res.map(change => ({key: change.payload.key, ...change.payload.val()}));
+    console.log(this.cidades)
+ });
 }
+
+ }

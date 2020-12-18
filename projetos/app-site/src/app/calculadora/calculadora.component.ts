@@ -1,3 +1,6 @@
+import { firebase } from './../../environments/environment';
+import { async } from '@angular/core/testing';
+import { AngularFireDatabase, snapshotChanges } from 'angularfire2/database';
 import { ResultCalcModalComponent } from './result-calc-modal/result-calc-modal.component';
 import { CalculadoraService, Estado } from './calculadora.service';
 import { Component, Inject, OnInit } from '@angular/core';
@@ -13,7 +16,7 @@ import { LoadingController } from '@ionic/angular';
 })
 export class CalculadoraComponent implements OnInit {
   estados: any;
-  cidades: any;
+  cidades: any [] = [];
   distribuidora: any = {};
   kwhInput: any = {};
   showCidades = false;
@@ -66,6 +69,8 @@ export class CalculadoraComponent implements OnInit {
   constructor(
     public loadingController: LoadingController,
     @Inject(DOCUMENT) document,
+    private firebase: AngularFireDatabase,
+
     private modalCtrl: ModalController,
     private service: CalculadoraService
   ) { }
@@ -104,7 +109,7 @@ export class CalculadoraComponent implements OnInit {
   async presentLoading() {
     this.loading = await this.loadingController.create({
       spinner: 'bubbles',
-      duration: 5000,
+      duration: 2000,
       translucent: true,
       cssClass: 'custom-class custom-loading',
       backdropDismiss: true,
@@ -121,15 +126,11 @@ export class CalculadoraComponent implements OnInit {
     this.showCidades = true
    // this.presentLoading();
     console.log(event.target.value)
-    this.service.getCidades(uf).subscribe(
-      data => {
-        this.cidades = data
-        console.log(this.cidades);
-        this.loadingController.dismiss();
-      }
-      
-    )
-
+  
+  this.service.getCidades(uf)
+  this.cidades = this.service.cidades
+  console.log(this.cidades)
+ 
   }
 
   async loaderDismiss(){

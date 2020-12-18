@@ -4,4 +4,39 @@
     border: 1px solid #ccc;
     margin-top: 5px;
     padding-left: 5px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color:orange;
+     span{
+         color: #fff;
+     }
+    
+}
+
+.subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color:#fff;
+}
+
+.action{
+    margin-top: 9%;
+     border: 1px solid #1e6188; 
+    height: 41px;
+    width: 100%;
+    background-color: #0c3d59;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }

@@ -1,3 +1,4 @@
+import { CalculadoraModule } from './calculadora/calculadora.module';
 import { ComponentsDesktopModule } from './components-desktop/components-desktop.module';
 import { LayoutModule } from './layout/layout.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -15,13 +16,23 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-//import { AngularFireModule } from '@angular/fire';
-//import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {  environment  } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HttpClientModule } from '@angular/common/http';
 
 library.add(fas, far, fab); // add all icons
+export const firebaseConfig = {
+  apiKey: "AIzaSyBjo6UzYD4uggnTrwPg9agRkHDEwT5z_VE",
+  authDomain: "cidades-estados-71974.firebaseapp.com",
+  databaseURL: "https://cidades-estados-71974-default-rtdb.firebaseio.com",
+  projectId: "cidades-estados-71974",
+  storageBucket: "cidades-estados-71974.appspot.com",
+  messagingSenderId: "829171509664",
+  appId: "1:829171509664:web:8aa21e6a193e6ab1121cc5",
+  measurementId: "G-4FRX9697ZS"
+};
 
 @NgModule({
   declarations: [AppComponent, ],
@@ -31,11 +42,11 @@ library.add(fas, far, fab); // add all icons
     HttpClientModule,
     LayoutModule,
     FontAwesomeModule,
-
     ComponentsDesktopModule,
-   // AngularFireModule.initializeApp(firebase),
-    //AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     IonicModule.forRoot(),
+    CalculadoraModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 ],
@@ -45,7 +56,6 @@ library.add(fas, far, fab); // add all icons
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
- 
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
