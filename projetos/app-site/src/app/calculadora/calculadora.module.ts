@@ -6,8 +6,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicModule } from '@ionic/angular';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrMaskerModule } from 'br-mask';
 
 @NgModule({
+ 
   declarations:[
     CalculadoraComponent
   ],
@@ -16,8 +19,9 @@ import { IonicModule } from '@ionic/angular';
     HttpClientModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule.forRoot(),
-    
+    BrMaskerModule    
   ],
   providers: [
     CalculadoraService

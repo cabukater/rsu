@@ -9,12 +9,17 @@
     </ion-text>
     </ion-col>
   </ion-row>
-  <form>   <ion-row class="ion-margin-horizontal">
+  <form [formGroup]="form"> 
+      <ion-row class="ion-margin-horizontal">
             <ion-col size-md="3" size="12" class="ion-padding">
               <ion-text color="light"> 
-               <ion-label>Média Mensal em Kwh</ion-label>
+               <ion-label>Quakl o valor de sua conta Mensal?</ion-label>
             </ion-text>
-             <input type="number" id="kwh" pattern="[0-9]+"  (change)="onchangeValueMedia($event)"  required [(ngModel)]="kwhInput" name="kwhInput" class="form-control">
+             <ion-input
+                id="kwh"
+                [brmasker]="{money: true, decimal:2}"
+               required formControlName="valorContaMensal" 
+               name="kwhInput" class="form-control"></ion-input>
              <input type="hidden" value="testeinputhidden" id="metainput">
 
             </ion-col>
@@ -22,9 +27,9 @@
               <ion-text color="light"> 
                   <ion-label>Estado</ion-label>
                   </ion-text>
-             <select (change)="onSelectEstado($event)" class="form-control" id="estados"   [disabled]="!showEstados">
+             <select (change)="onSelectEstado($event)" formControlName="estado" class="form-control" id="estados"   >
                <option *ngFor="let estado of estados?.data"
-                [value]="estado.uf_nome">
+                [ngValue]="estado">
                  {{estado.nome}}
                </option>
              </select>
@@ -33,8 +38,8 @@
               <ion-text color="light"> 
                   <ion-label>Companhia </ion-label>
                   </ion-text>
-              <select id="cidades" class="form-control" (change)="onSelectcidade($event)" [(ngModel)]="distribuidora" name="distribuidora" [disabled]="!showCidades">
-                <option *ngFor="let cidade of service.cidades" [value]="cidade.vlrTotaTRFConvencional" >
+              <select id="cia" class="form-control" (change)="onSelectCia()" formControlName="cia" name="distribuidora">
+                <option *ngFor="let cidade of service.cidades" [ngValue]="cidade" >
                  {{cidade.sigDistribuidora}}                
                </option>
               </select>

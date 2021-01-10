@@ -6,6 +6,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             public energiaGerada: number,
             public valorTarifa: number,
             public hsp: number,
+            public qtdModulos: any,
             public potenciaModulo: number,
             public areaModulo: number,
             public rendimentoModulo: number,
@@ -13,10 +14,10 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             public energiaAnualGerada: number,
             public valorOrcamento: number,
             public precoKwp: number,
+            public  quantModulos: number,
             public despesaViagema: number
         ){};
 
-      
         execute(): any{
             let contaEnergia = this.contaEnergia;
             let energiaGerada = this.energiaGerada;
@@ -26,14 +27,14 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             let areaModulo = this.areaModulo;
             let rendimentoModulo = this.rendimentoModulo;
             let taxaDisponibilidade = this.taxaDisponibilidade;         
-            let valorOrcamento = this.valorOrcamento;
             let precoKwp = this.precoKwp;
-            let quantidadeModulos:number;
+            let quantidadeModulos = this.quantModulos;
             let valorEconomizadoDezAnos :number;
 
             let potenciaGeradorSolar: number;
             let areaInstalacao: number;
             let energiaGeradaAnual: number;
+            let qtdModulos = this.qtdModulos;
             let valorPrevistoSistema: number;
             let precoMinOrcamento: number;
             let precoMaxOrcamento: number;
@@ -46,33 +47,35 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             let despesaViagem = this.despesaViagema;
 
             quantidadeModulos = Math.ceil((energiaGerada * 12) / (hsp * areaModulo * rendimentoModulo * 365));
-            potenciaGeradorSolar = (quantidadeModulos * potenciaModulo) / 1000;
-            areaInstalacao = quantidadeModulos * areaModulo;
+            potenciaGeradorSolar = (qtdModulos * potenciaModulo) / 1000;
+            areaInstalacao = qtdModulos * areaModulo;
             energiaGeradaAnual = energiaGerada * 12;
-            //valorPrevistoSistema = valorOrcamento / potenciaGeradorSolar;
+            valorPrevistoSistema =   potenciaGeradorSolar;
+
             kwp = potenciaGeradorSolar;
 
             if (kwp < 1.31 ) {
-                valor = 8578.89;
-            } else if (kwp < 1.96 ) {
-                valor = 13056.39;
-            } else if (kwp < 2.28 ) {
-                valor = 14130.99;
-            } else if (kwp <= 2.60 ) {
-                valor = 17175.69;
-            } else if (kwp <= 3.25 ) {
-                //valor = 19862.19; valor em w 350 valor inicial fica maior que o valor final
-                valor = 19162.19;
-            } else if (kwp <= 3.90 ) {
-                valor = 22011.39;
-            } else if (kwp <= 4.55 ) {
-                valor = 26130.69;
-            } else if (kwp <= 5.20 ) {
-                valor = 28905.75;
-            } else if (kwp <= 5.85 ) {
-                valor = 33442.95;
-            } else if (kwp <= 6.50 ) {
-                valor = 35150.00;
+                valor = 6000.89;
+            } else if (kwp < 1.50 ) {
+                valor = 6163.39;        
+        } else if (kwp < 1.80 ) {
+            valor = 6700.39;
+        } else if (kwp < 2.68 ) {
+                valor = 14842.57;
+            } else if (kwp <= 2.76 ) {
+                valor = 8121.00;
+            } else if (kwp <= 2.8 ) {
+                valor = 11681.78;
+            } else if (kwp <= 3.24 ) {
+                valor = 15937.39;
+            } else if (kwp <= 3.35 ) {
+                valor = 16752.22;
+            } else if (kwp <= 3.64 ) {
+                valor = 16690.78;
+            } else if (kwp <= 4.02 ) {
+                valor = 19107.95;
+            } else if (kwp <= 4.05 ) {
+                valor = 17.7777;
             } else if (kwp <= 7.15 ) {
                 valor = 39114.45;
             } else if (kwp <= 7.80 ) {
@@ -103,31 +106,34 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
                 valor = 102813.85;
             } else if (kwp > 19.20 ) {
                 minPrecoKwp = 5302.56;
-                valor = kwp * minPrecoKwp;
+                valor = kwp * minPrecoKwp ;
                 precoKwp = 6000.67;
             }
 
-            precoMinOrcamento = valor;
-            precoMaxOrcamentoTmp = kwp * precoKwp;
+            precoMinOrcamento = (valor + 250 + kwp * precoKwp);
+            precoMaxOrcamentoTmp = (valor + 250 + kwp * precoKwp + this.despesaViagema) ;
             precoMaxOrcamento = precoMaxOrcamentoTmp;
             if ( despesaViagem ) {
                 precoMaxOrcamento = despesaViagem;
             }
-            console.log(valorEconomiaMensal + 'oi')
+            console.log(valorPrevistoSistema.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
+           
              valorEconomiaMensal = valorTarifa * ( energiaGeradaAnual / 12);
             valorEconomizadoDezAnos = 150 * valorEconomiaMensal;
             valorEconomizadoTrintaAnos = 300 * valorEconomiaMensal;
             let calcTirVpl = this.calculosTirVpl(valorTarifa, this.calculosTirVpl, precoMinOrcamento);
             return {
                 desp: calcTirVpl,
-                quantModulos: quantidadeModulos,
                 potenciaKwp: potenciaGeradorSolar.toPrecision(3),
                 areaInst: areaInstalacao,
+                qtdModulos: qtdModulos,
+                precoMax :precoMaxOrcamentoTmp,
                 energiaGeradaAnual: energiaGeradaAnual.toPrecision(6),
                 valorEconomizadoTrintaAnos: valorEconomizadoTrintaAnos.toLocaleString('pt-br', {
                     style: 'currency',
                     currency: 'BRL'
                 }),
+            
                 valorEconomiaMensal: valorEconomiaMensal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 precoMinOrcamento: precoMinOrcamento.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 precoMaxOrcamento: precoMaxOrcamento.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
@@ -136,8 +142,6 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             };
 
         };
-
-
 
         calculosTirVpl(fvalorTarifa, cenergiaGeradaAnual, cprecoMinOrcamento): any {
             /**
@@ -148,7 +152,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             let taxaAnualOeM = 0.0025;
             let perdaRendimentoAnualA = 0.005;
             let perdaRendimentoAnualB = 0.995;
-            let custoInversor = 3000;
+            let custoInversor = 2949.00;
 
             /**
              * @var temps
@@ -158,7 +162,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             let eneGerAnualB = 0;
             let eneGerAnualC = 0;
             let resultEneGerAual = 0;
-            let resultFinalInvest = 3000;
+            let resultFinalInvest = 85000;
             let custoOeM = 0;
             let receitaAnualFv = 0;
             let receitaLiquidaAnual = 0;
@@ -186,6 +190,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
                 }
                 resultadoFinal = fvalorTarifa * eneGerAnualC;
                 resultFinalInvest -= resultadoFinal;
+            
             }
             resultFinalInvest = (resultFinalInvest * -1) - custoInversor;
             receitaAnualFv = fvalorTarifa * parseInt(resultEneGerAual.toPrecision(5));
@@ -197,7 +202,9 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
                 custoOeM: custoOeM.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 receitaLiquidaAnual: receitaLiquidaAnual.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 resultFinalInvest: resultFinalInvest
+                
             };
+           
         };
 
         regexDecimal(arg): any {

@@ -1,4 +1,3 @@
-import { firebase } from './../../environments/environment';
 import { async } from '@angular/core/testing';
 import { AngularFireDatabase, snapshotChanges } from 'angularfire2/database';
 import { ResultCalcModalComponent } from './result-calc-modal/result-calc-modal.component';
@@ -8,7 +7,7 @@ import { DOCUMENT } from '@angular/common';
 import { CalculoFotoVoltaico } from './CalculoFotoVoltaico';
 import { ModalController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
-
+import { FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
@@ -16,6 +15,8 @@ import { LoadingController } from '@ionic/angular';
 })
 export class CalculadoraComponent implements OnInit {
   estados: any;
+  form: FormGroup;
+
   cidades: any [] = [];
   distribuidora: any = {};
   kwhInput: any = {};
@@ -39,13 +40,13 @@ export class CalculadoraComponent implements OnInit {
   //  @todo parametros do sistema
   //=============================================
 
-  hsp = 4.27;
-  potenciaModulo = 325;
-  areaModulo = 1.92;
-  rendimentoModulo = 0.1674;
+  hsp : number;
+  potenciaModulo = 330;
+  areaModulo = 1.96;
+  rendimentoModulo = 16.27;
   taxaDisponibilidade = 50;
-  valorOrcamento = 44889.31;
-  precoKwp = 6695.58;
+  valorOrcamento : any;
+  precoKwp : any;
   despesaViagema: number;
   energiaAnualGerada: number;
   qtdModulos: any;
@@ -66,6 +67,8 @@ export class CalculadoraComponent implements OnInit {
   precoMaxOrcamento: any;
   mAreaInstalacao: any;
   loading: HTMLIonLoadingElement;
+  regiao: any;
+  modulosPorRegiao: any;
   constructor(
     public loadingController: LoadingController,
     @Inject(DOCUMENT) document,
@@ -76,109 +79,116 @@ export class CalculadoraComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+    this.form = new FormGroup({
+      valorContaMensal: new FormControl(),
+      estado: new FormControl(),
+      cia: new FormControl()
+    }) 
+    this.getEstados()
   }
-
+//OBTENS OS ESTADOS
   getEstados(){
-    this.presentLoading();
     this.service.getEstados().subscribe(
       data => {
         this.estados = data;
-        console.log(this.estados.data);
-        this.loaderDismiss()
-      })
-      this.loaderDismiss()
+      })     
   }
-
+//LOGICA PARA VALIDAR O FORM 
+//STEPS
   onchangeValueMedia(event){
-    
     if(event.target.value != null || event.target.value == 0 ){
-
       this.getEstados();
-
       this.showEstados = true;
-   
     }else{
       this.showEstados = false;
       this.showCidades = false;
-      
     }
-    
-  }
-
-  async presentLoading() {
-    this.loading = await this.loadingController.create({
-      spinner: 'bubbles',
-      duration: 2000,
-      translucent: true,
-      cssClass: 'custom-class custom-loading',
-      backdropDismiss: true,
-      message: 'Carregando...',
-    //  duration: 2000
-    });
-   this.loading.present();
-
-    console.log('Loading dismissed!');
   }
 
   onSelectEstado(event) {
-    let uf = event.target.value;
+    let uf = this.form.get('estado').value.uf_nome;
     this.showCidades = true
-   // this.presentLoading();
-    console.log(event.target.value)
-  
+   
+   // ABAIXO O OBJETO DO ESTADO EM VALOR 
+   this.form.get('estado').value
+      if (this.form.get('estado').value.regiao === 'Norte'){
+        this.hsp = 4.55;
+        this.qtdModulos = 7
+     
+      } if (this.form.get('estado').value.regiao === 'Nordeste'){
+        this.hsp = 5.60;
+        this.qtdModulos = 8
+
+      }
+      if (this.form.get('estado').value.regiao === 'Centro-Oeste'){
+        this.hsp = 5.25;
+        this.qtdModulos = 7
+
+      }
+      if (this.form.get('estado').value.regiao === 'Sudeste'){
+        this.hsp = 4.55;
+        this.qtdModulos = 8
+
+      }
+      if (this.form.get('estado').value.regiao === 'Sul'){
+        this.hsp = 4.20;
+        this.modulosPorRegiao =
+        this.qtdModulos = 7
+
+      }
+
   this.service.getCidades(uf)
   this.cidades = this.service.cidades
-  console.log(this.cidades)
- 
+  
   }
 
   async loaderDismiss(){
     const { role, data } = await this.loading.onDidDismiss();
 
  }
-  onSelectcidade(event) {
-    let $kwh = this.kwhInput;
+  onSelectCia() {
+    let tarifaOperadora = this.form.get('cia').value.vlrTotaTRFConvencional;
+    let $kwh = this.form.get('valorContaMensal').value ;
+    let inReal = parseFloat($kwh.replace(",", "."))
+   
+    console.log(this.form.get('cia').value)
+   
+   let ipi=inReal*0.29;
+   console.log ("<p> Valor do IPI: R$ " +ipi);
+    
+   let icms= (inReal/(100-24)*0.24)*100;
+   console.log ("<p> Valor do ICMS: R$ " +icms);
+    
+   let tp = (inReal -ipi - icms);
+   let totalP =  (inReal - tp).toFixed(0)
+   this.kwhInput = totalP;
+   this.precoKwp = totalP
 
-    switch ($kwh) {
-      case '':
-        console.log($kwh + ' - case01');
-        break;
-      case null:
-        console.log($kwh + ' - case02');
-        break;
-      case NaN:
-        console.log($kwh);
-        break;
-      default:
-
-    }
   }
 
   getREsults() {
     this.resultado(this.kwhInput, 0);
     let k = this.kwhInput;
-    console.log(k)
     let kmtotal = 12 * (k / 5.565);
     this.carroEletrico = Math.round(kmtotal);
     this.mCarroEletrico = Math.round(kmtotal);
-    console.log(this.distribuidora);
 
     let regexs = new CalculoFotoVoltaico(
       this.contaEnergia, this.energiaGerada,
       this.valorTarifa, this.hsp,
+      this.qtdModulos,
       this.potenciaModulo, this.areaModulo,
       this.rendimentoModulo, this.taxaDisponibilidade,
       this.energiaAnualGerada, this.valorOrcamento, this.precoKwp, this.despesaViagema
     );
     this.valorTarifa = this.distribuidora;
     this.energiaGerada = regexs.regexDecimal(this.kwhInput);
-    //energiaGerada = +(<HTMLInputElement>document.getElementById('kwh')).value;
     this.contaEnergia = this.energiaGerada * this.valorTarifa;
 
     let calculo = new CalculoFotoVoltaico(
       this.contaEnergia, this.energiaGerada,
       this.valorTarifa, this.hsp,
+      this.qtdModulos,
       this.potenciaModulo, this.areaModulo,
       this.rendimentoModulo, this.taxaDisponibilidade,
       this.energiaAnualGerada, this.valorOrcamento, this.precoKwp, this.despesaViagema
@@ -194,7 +204,7 @@ export class CalculadoraComponent implements OnInit {
     this.mGeracaoAnual = obj.energiaGeradaAnual;
     this.tamanhoSistema = obj.potenciaKwp;
     this.mTamanhoSistema = obj.potenciaKwp;
-    this.qtdModulos = obj.quantModulos;
+    this.qtdModulos = this.modulosPorRegiao;
     this.mQtdModulos = obj.quantModulos;
     this.economialMensal = obj.valorEconomiaMensal;
     this.mEconomialMensal = obj.valorEconomiaMensal;
@@ -258,6 +268,7 @@ export class CalculadoraComponent implements OnInit {
     let tamanhoSistema = this.tamanhoSistema;
     let mTamanhoSistema = this.mTamanhoSistema;
     let qtdModulos = this.qtdModulos;
+    let mdRegiao = this.modulosPorRegiao;
     let mQtdModulos = this.mQtdModulos;
     let economialMensal = this.economialMensal;
     let mArvoresPlantadas = this.mArvoresPlantadas;
@@ -273,6 +284,7 @@ export class CalculadoraComponent implements OnInit {
       obj,
       dados: {
         reducaoCo,
+       
         mReducaoCo,
         arvoresPlantadas,
         mArvoresPlantadas,

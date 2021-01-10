@@ -10,5 +10,6 @@
         energiaAnualGerada: number;
         precoKwp: number;
         despesaViagema: number;
+        qtdModulos: number
 
     }

@@ -8,6 +8,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {  environment  } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxCurrencyModule } from 'ngx-currency';
 
 library.add(fas, far, fab); // add all icons
 export const firebaseConfig = {
@@ -47,6 +49,9 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     IonicModule.forRoot(),
     CalculadoraModule,
+    ReactiveFormsModule,
+    NgxCurrencyModule,
+
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 ],

@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase, AngularFireList, snapshotChanges } from 'angularfire2/database';
 import { map } from 'rxjs/operators';
-import { threadId } from 'worker_threads';
 export interface Estado{
         id: string;
         uf_codigo: string;
@@ -31,11 +30,10 @@ export class CalculadoraService {
   ) { }
 
   getEstados(){
-   return  this.http.get('http://technosol.ind.br/teste/js/estados.json').pipe()
+   return  this.http.get('http://technosol.ind.br/estados.json').pipe()
    }
 
-   getCidades(uf){
-      
+   getCidades(uf){    
      //return this.http.get('http://cidades-estados-71974-default-rtdb.firebaseio.com/data?sigUF='+ uf).pipe(
       this.cidadesRef = this.firebase.list('/data', ref => ref
       .orderByChild('sigUF')
@@ -43,7 +41,6 @@ export class CalculadoraService {
      this.cidadesRef
     .snapshotChanges().subscribe((res) => {
     this.cidades = res.map(change => ({key: change.payload.key, ...change.payload.val()}));
-    console.log(this.cidades)
  });
 }
 
