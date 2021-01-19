@@ -36,6 +36,14 @@ const routes: Routes = [
   {
     path: 'contato',
     loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
+  },
+  {
+    path: 'leads',
+    loadChildren: () => import('./leads/leads.module').then( m => m.LeadsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login-page/login-page.module').then( m => m.LoginPagePageModule)
   }
  
 ];
@@ -44,6 +52,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
+  
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

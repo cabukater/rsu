@@ -11,9 +11,15 @@
   </ion-row>
   <form [formGroup]="form"> 
       <ion-row class="ion-margin-horizontal">
-            <ion-col size-md="3" size="12" class="ion-padding">
+        <ion-col size-md="2" size="12" class="ion-padding">
+          <ion-text color="light"> 
+              <ion-label>Nome </ion-label>
+              </ion-text>
+        <input type="text" formControlName="nome" required class="form-control">
+        </ion-col>
+            <ion-col size-md="2" size="12" class="ion-padding">
               <ion-text color="light"> 
-               <ion-label>Quakl o valor de sua conta Mensal?</ion-label>
+               <ion-label>Valor Conta:</ion-label>
             </ion-text>
              <ion-input
                 id="kwh"
@@ -27,25 +33,31 @@
               <ion-text color="light"> 
                   <ion-label>Estado</ion-label>
                   </ion-text>
-             <select (change)="onSelectEstado($event)" formControlName="estado" class="form-control" id="estados"   >
-               <option *ngFor="let estado of estados?.data"
+             <select required (change)="onSelectEstado($event)" formControlName="estado" class="form-control" id="estados" >
+               <option *ngFor="let estado of service.estados"
                 [ngValue]="estado">
                  {{estado.nome}}
                </option>
              </select>
             </ion-col>
-            <ion-col size-md="4" size="12" class="ion-padding">
+            <ion-col size-md="2" size="12" class="ion-padding">
               <ion-text color="light"> 
                   <ion-label>Companhia </ion-label>
                   </ion-text>
-              <select id="cia" class="form-control" (change)="onSelectCia()" formControlName="cia" name="distribuidora">
+              <select  required id="cia" class="form-control" (change)="onSelectCia()" formControlName="cia" name="distribuidora">
                 <option *ngFor="let cidade of service.cidades" [ngValue]="cidade" >
                  {{cidade.sigDistribuidora}}                
                </option>
               </select>
             </ion-col>
+            <ion-col size-md="3" size="12" class="ion-padding">
+              <ion-text color="light"> 
+                  <ion-label>Email </ion-label>
+                  </ion-text>
+            <input type="email" formControlName="email"   class="form-control">
+            </ion-col>
             <ion-col size-md="3" size="12" class="ion-padding">           
-              <button class="fluid ui big  action disabled primary button" (click)="getREsults()" >
+              <button class="fluid ui big  action  primary button" (click)="getREsults(form.value)" [disabled]="form.invalid">
                 Calcular
               </button>
             </ion-col>

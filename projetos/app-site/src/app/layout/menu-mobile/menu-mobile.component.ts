@@ -26,18 +26,29 @@ export class MenuMobileComponent {
   ngOnInit() {}
   quemSomos(){
     this.router.navigate(['/quem-somos'])
+    this.modalDismiss()
   }
 painelSolar(){
   this.router.navigate(['/painel-solar'])
+  this.modalDismiss()
+
 }
 iluminacaoProf(){
   this.router.navigate(['/iluminacao-profissional'])
+  this.modalDismiss()
 }
 outrosServ(){
   this.router.navigate(['/outros-servicos'])
+  this.modalDismiss()
 }
 contato(){
   this.router.navigate(['/contato'])
+  this.modalDismiss()
 }
 
+modalDismiss(){
+  this.modal.dismiss({
+    'dismissed': true
+  });
+}
 }

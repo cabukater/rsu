@@ -16,8 +16,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class CalculadoraComponent implements OnInit {
   estados: any;
   form: FormGroup;
-
-  cidades: any [] = [];
+  cidades: any;
   distribuidora: any = {};
   kwhInput: any = {};
   showCidades = false;
@@ -75,24 +74,25 @@ export class CalculadoraComponent implements OnInit {
     private firebase: AngularFireDatabase,
 
     private modalCtrl: ModalController,
-    private service: CalculadoraService
+    public service: CalculadoraService
   ) { }
 
   ngOnInit() {
     this.form = new FormGroup({
       valorContaMensal: new FormControl(),
       estado: new FormControl(),
+       email: new FormControl(),
+       nome: new FormControl(),
       cia: new FormControl()
     }) 
-    this.getEstados()
+    this.getEstados();
+
   }
 //OBTENS OS ESTADOS
   getEstados(){
-    this.service.getEstados().subscribe(
-      data => {
-        this.estados = data;
-      })     
-  }
+  
+     this.estados = this.service.getEstados()
+    }
 //LOGICA PARA VALIDAR O FORM 
 //STEPS
   onchangeValueMedia(event){
@@ -107,8 +107,8 @@ export class CalculadoraComponent implements OnInit {
 
   onSelectEstado(event) {
     let uf = this.form.get('estado').value.uf_nome;
+ 
     this.showCidades = true
-   
    // ABAIXO O OBJETO DO ESTADO EM VALOR 
    this.form.get('estado').value
       if (this.form.get('estado').value.regiao === 'Norte'){
@@ -136,10 +136,8 @@ export class CalculadoraComponent implements OnInit {
         this.qtdModulos = 7
 
       }
-
-  this.service.getCidades(uf)
-  this.cidades = this.service.cidades
-  
+      this.cidades = this.service.getCidades(uf)
+     
   }
 
   async loaderDismiss(){
@@ -150,8 +148,7 @@ export class CalculadoraComponent implements OnInit {
     let tarifaOperadora = this.form.get('cia').value.vlrTotaTRFConvencional;
     let $kwh = this.form.get('valorContaMensal').value ;
     let inReal = parseFloat($kwh.replace(",", "."))
-   
-    console.log(this.form.get('cia').value)
+   this.valorTarifa = tarifaOperadora;
    
    let ipi=inReal*0.29;
    console.log ("<p> Valor do IPI: R$ " +ipi);
@@ -166,8 +163,9 @@ export class CalculadoraComponent implements OnInit {
 
   }
 
-  getREsults() {
+  getREsults(form) {
     this.resultado(this.kwhInput, 0);
+    this.service.saveCLient(form)
     let k = this.kwhInput;
     let kmtotal = 12 * (k / 5.565);
     this.carroEletrico = Math.round(kmtotal);
@@ -181,17 +179,20 @@ export class CalculadoraComponent implements OnInit {
       this.rendimentoModulo, this.taxaDisponibilidade,
       this.energiaAnualGerada, this.valorOrcamento, this.precoKwp, this.despesaViagema
     );
-    this.valorTarifa = this.distribuidora;
+
     this.energiaGerada = regexs.regexDecimal(this.kwhInput);
     this.contaEnergia = this.energiaGerada * this.valorTarifa;
 
     let calculo = new CalculoFotoVoltaico(
+
       this.contaEnergia, this.energiaGerada,
       this.valorTarifa, this.hsp,
       this.qtdModulos,
       this.potenciaModulo, this.areaModulo,
       this.rendimentoModulo, this.taxaDisponibilidade,
-      this.energiaAnualGerada, this.valorOrcamento, this.precoKwp, this.despesaViagema
+      this.energiaAnualGerada, this.valorOrcamento, 
+      this.precoKwp, 
+      this.despesaViagema
     );
 
     let obj: any;
@@ -215,6 +216,7 @@ export class CalculadoraComponent implements OnInit {
     this.mPrecoMinOrcamento = obj.precoMinOrcamento;
     this.precoMaxOrcamento = obj.precoMaxOrcamento;
     this.mPrecoMaxOrcamento = obj.precoMaxOrcamento;
+    this.despesaViagema = obj.despesaViagema;
     this.areaInstalacao = obj.areaInst.toPrecision(3);
     this.mAreaInstalacao = obj.areaInst.toPrecision(3);
   }
@@ -276,6 +278,7 @@ export class CalculadoraComponent implements OnInit {
     let carroEletrico = this.carroEletrico;
     let mCarroEletrico = this.mCarroEletrico;
     let areaInstalacao= this.areaInstalacao;
+    this.form.reset();
   const modal = await this.modalCtrl.create({
     component: ResultCalcModalComponent,
     cssClass: 'my-custom-class',
@@ -299,9 +302,14 @@ export class CalculadoraComponent implements OnInit {
         mAreaInstalacao
       }
       },
+    
       presentingElement: await this.modalCtrl.getTop() // Get the top-most ion-modal
     });
+   
   return await modal.present();
+
 }
+
+//salvar contato
 
 }

@@ -20,9 +20,11 @@ import { BrMaskerModule } from 'br-mask';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IonicModule.forRoot(),
-    BrMaskerModule    
+    IonicModule,
+    BrMaskerModule,
+       
   ],
+  
   providers: [
     CalculadoraService
   ],

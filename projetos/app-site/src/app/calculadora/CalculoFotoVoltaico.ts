@@ -14,8 +14,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             public energiaAnualGerada: number,
             public valorOrcamento: number,
             public precoKwp: number,
-            public  quantModulos: number,
-            public despesaViagema: number
+            public despesaViagema: any
         ){};
 
         execute(): any{
@@ -28,7 +27,7 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             let rendimentoModulo = this.rendimentoModulo;
             let taxaDisponibilidade = this.taxaDisponibilidade;         
             let precoKwp = this.precoKwp;
-            let quantidadeModulos = this.quantModulos;
+            let quantidadeModulos = this.qtdModulos;
             let valorEconomizadoDezAnos :number;
 
             let potenciaGeradorSolar: number;
@@ -118,9 +117,9 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
             }
             console.log(valorPrevistoSistema.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
            
-             valorEconomiaMensal = valorTarifa * ( energiaGeradaAnual / 12);
-            valorEconomizadoDezAnos = 150 * valorEconomiaMensal;
-            valorEconomizadoTrintaAnos = 300 * valorEconomiaMensal;
+           valorEconomiaMensal = this.valorTarifa * ( energiaGeradaAnual / 12);
+            valorEconomizadoDezAnos = valorEconomiaMensal * 120;
+            valorEconomizadoTrintaAnos =  valorEconomiaMensal * 300 ;
             let calcTirVpl = this.calculosTirVpl(valorTarifa, this.calculosTirVpl, precoMinOrcamento);
             return {
                 desp: calcTirVpl,
@@ -133,12 +132,11 @@ import { ICalculoFotoVoltaico } from './i-calculo-foto-voltaico';
                     style: 'currency',
                     currency: 'BRL'
                 }),
-            
                 valorEconomiaMensal: valorEconomiaMensal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 precoMinOrcamento: precoMinOrcamento.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
                 precoMaxOrcamento: precoMaxOrcamento.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
-                resultFinalInvestDez:  (valorEconomizadoDezAnos - precoMaxOrcamento).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
-                resultFinalInvest:  (valorEconomizadoTrintaAnos - precoMaxOrcamento).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
+                resultFinalInvestDez:  (valorEconomizadoDezAnos - precoMinOrcamento).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
+                resultFinalInvest:  (valorEconomizadoTrintaAnos - precoMinOrcamento).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}),
             };
 
         };

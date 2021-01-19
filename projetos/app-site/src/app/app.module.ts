@@ -23,6 +23,8 @@ import {  environment  } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxCurrencyModule } from 'ngx-currency';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AngularFireAuth } from  "@angular/fire/auth";
 
 library.add(fas, far, fab); // add all icons
 export const firebaseConfig = {
@@ -36,6 +38,17 @@ export const firebaseConfig = {
   measurementId: "G-4FRX9697ZS"
 };
 
+export const firebaseConfigLeads = {
+  apiKey: "AIzaSyB67S_YbeXf3iijOIfhkNtXzjG_-Kl5Ahg",
+  authDomain: "lead-clientes.firebaseapp.com",
+  databaseURL: "https://lead-clientes-default-rtdb.firebaseio.com",
+  projectId: "lead-clientes",
+  storageBucket: "lead-clientes.appspot.com",
+  messagingSenderId: "1040368527983",
+  appId: "1:1040368527983:web:b5d4d2e50a75107d777b9a",
+  measurementId: "G-NNSBNYB7HF"
+};
+
 @NgModule({
   declarations: [AppComponent, ],
 
@@ -45,7 +58,7 @@ export const firebaseConfig = {
     LayoutModule,
     FontAwesomeModule,
     ComponentsDesktopModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig, firebaseConfigLeads),
     AngularFireDatabaseModule,
     IonicModule.forRoot(),
     CalculadoraModule,
@@ -59,7 +72,8 @@ export const firebaseConfig = {
     StatusBar,
     NavParams,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    AngularFireAuth,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]

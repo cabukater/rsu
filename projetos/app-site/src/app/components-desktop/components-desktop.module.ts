@@ -3,11 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselBoxesComponent } from './carousel-boxes/carousel-boxes.component';
 import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
+import { CarrosselComponent } from './carrossel/carrossel.component';
 
 @NgModule({
   declarations: [
     CarouselBoxesComponent,
     MapaFormComponent,
+    CarrosselComponent
 
   ],
   imports: [
@@ -16,11 +18,13 @@ import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
   ],
   entryComponents: [
     CarouselBoxesComponent,
-    MapaFormComponent
+    MapaFormComponent,
+    CarrosselComponent
   ],
    exports: [
     CarouselBoxesComponent,
     MapaFormComponent,
+    CarrosselComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

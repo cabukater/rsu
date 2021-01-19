@@ -25,7 +25,7 @@
       </ion-col>
 
       <ion-col size="12" size-sm>
-        <p> Minímo {{obj?.precoMinOrcamento}} máximo {{obj?.precoMaxOrcamentoTmp}}
+        <p> Valor médio (módulo de 330kw) {{obj?.precoMinOrcamento}}
         </p>
       </ion-col>
     </ion-row>
@@ -155,6 +155,21 @@
       </ion-col>
     </ion-row>
 
+    <ion-row>
+      <ion-col size-lg="6" size-md="6" size="12" class="ion-padding">           
+        <a href="https://meufinanciamentosolar.com.br/?utm_campaign=Google_Ads_-_Pesquisa_Financiamento&utm_content=financiamento&utm_source=google_ads&utm_medium=cpc&placement=Conta_MFS&device=c&campaignid=11285682462&adgroupid=107576346861&adid=474422970418&network=g&utm_term=financiamento%20solar&gclid=CjwKCAiAxeX_BRASEiwAc1QdkW5YYf0xeqjAPaQ_IKsknGDFCUFvKYy8vv168Zbmi55QZtq_4fDL-BoCeygQAvD_BwE#simulacao"  (click)="modalDismiss()" target="blank"
+         class="button  action-2 "  >
+          Financie agora
+        </a>
+      </ion-col>
+
+  <ion-col size-md="6"  size-lg="6" size="12" class="ion-padding">           
+    <button class="fluid ui big  action  primary button" (click)="modalDismiss()" >
+      Fechar
+    </button>
+  </ion-col>
+</ion-row>  
 
   </ion-card>
+
 </ion-grid>

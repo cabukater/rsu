@@ -9,7 +9,7 @@
         taxaDisponibilidade: number;
         energiaAnualGerada: number;
         precoKwp: number;
-        despesaViagema: number;
+        despesaViagema: any;
         qtdModulos: number
 
     }

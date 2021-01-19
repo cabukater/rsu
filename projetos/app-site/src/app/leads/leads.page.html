@@ -1,0 +1,31 @@
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+<table class="table table-striped  table-hover">
+  <thead>
+    <tr>
+    
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Valor do Orçamento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lead of service.leads">
+      
+      <td>{{lead.nome}}</td>
+      <td>{{lead.email}}</td>
+      <td>{{lead.telefone}}</td>
+      <td>{{lead.valorContaMensal}}</td>
+    </tr>
+  
+  </tbody>
+</table>
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
