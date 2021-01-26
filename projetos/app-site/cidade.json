@@ -1,0 +1,10 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "json-server",
+      "email": "typicode",
+      "telefone":"1212313"
+    }
+  ]
+}

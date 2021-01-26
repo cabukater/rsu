@@ -1,5 +1,7 @@
+import { ICalcComponent } from './../i-calc/i-calc.component';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,8 @@ export class HomePage {
     speed: 400
   };
   constructor(
-    private router: Router
+    private router: Router,
+    public modalController: ModalController
 
   ) {}
 
@@ -26,4 +29,11 @@ export class HomePage {
     this.router.navigate(['/outros-servicos'])
   }
 
+  async openCalc() {
+    const modal = await this.modalController.create({
+      component: ICalcComponent,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 }

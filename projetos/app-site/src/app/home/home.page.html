@@ -1,5 +1,4 @@
-
- <section  class="slide">
+<section class="slide">
 
   <ion-slides pager="true" [options]="slideOpts" class="animate__fadeInDown animate__delay-4s">
     <ion-slide>
@@ -14,34 +13,59 @@
   </ion-slides>
 
 
- </section> 
-  <ion-fab vertical="center" horizontal="end">
-    <ion-fab-button color="secondary">Social</ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button href="https://www.facebook.com/technosolsustentabilidade/?view_public_for=169487749771258">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button href="https://api.whatsapp.com/send?phone=5511993047125&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
-        <ion-icon name="logo-whatsapp"  ></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button href="https://api.whatsapp.com/send?phone=5511959434301&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button href="https://api.whatsapp.com/send?phone=5518996776527&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es"> 
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-   </ion-fab>
-<section class="bg-2">
-  <app-calculadora></app-calculadora>
 </section>
-<section >
-   <app-carousel-boxes class="ion-padding-top ion-margin-top boxes app-carousel-boxes"></app-carousel-boxes>
+
+
+<ion-fab vertical="center" horizontal="end">
+  <ion-fab-button color="secondary">Social</ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button href="https://www.facebook.com/technosolsustentabilidade/?view_public_for=169487749771258">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button
+      href="https://api.whatsapp.com/send?phone=5511993047125&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button
+      href="https://api.whatsapp.com/send?phone=5511959434301&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button
+      href="https://api.whatsapp.com/send?phone=5518996776527&amp;text=Ol%C3%A1%20visitei%20o%20site%20da%20Technosol%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+<section class="bg-2">
+
+  <ion-grid fixed>
+
+    <ion-row class="ion-margin-horizontal">
+      <ion-col size-md="8" size="12" >
+        <ion-text color="light">
+          <h2 class="title">Calcule <span class="white">Online</span></h2>
+          <p class="subtitle"> Saiba aqui o valor estimado de custo e economia.</p>
+        </ion-text>
+      </ion-col>
+      <ion-col size-md="4" size="12">
+        <button class="fluid ui big  action-4  primary button" (click)="openCalc()" >
+          Calcular
+        </button>
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+
+
+</section>
+<section>
+  <app-carousel-boxes class="ion-padding-top ion-margin-top boxes app-carousel-boxes"></app-carousel-boxes>
 </section>
 <section class="bg-1">
   <app-mapa-form></app-mapa-form>
 </section>
-<section class="bg-1">
+<section class="bg-3">
   <app-carrossel></app-carrossel>
 </section>
-

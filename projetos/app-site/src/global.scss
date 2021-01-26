@@ -38,6 +38,9 @@ body{
     background-attachment: fixed;
 }
 
+.bg-3{
+  background-image: linear-gradient(to bottom, #ea820a, #e79207, #e3a10f, #dfaf1b, #dabd2a);  background-attachment: fixed;
+}
 .bg-2{
   --ion-background: rgb(12,61,89);
   background: linear-gradient(90deg, #0c3d59 0%, #4e819e 50.8%, #4482a5 47%, #e89d51 100%);
