@@ -1,3 +1,4 @@
+import { AngularFireStorage } from '@angular/fire/storage';
 import { CalculadoraModule } from './calculadora/calculadora.module';
 import { ComponentsDesktopModule } from './components-desktop/components-desktop.module';
 import { LayoutModule } from './layout/layout.module';
@@ -25,6 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxCurrencyModule } from 'ngx-currency';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AngularFireAuth } from  "@angular/fire/auth";
+import { IcalcModule } from './i-calc/i-calc.module';
+import { NgxMaskModule } from 'ngx-mask';
+import { AngularFireAuthGuard } from './services/auth-guard.service';
 
 library.add(fas, far, fab); // add all icons
 export const firebaseConfig = {
@@ -61,10 +65,10 @@ export const firebaseConfigLeads = {
     AngularFireModule.initializeApp(firebaseConfig, firebaseConfigLeads),
     AngularFireDatabaseModule,
     IonicModule.forRoot(),
+    NgxMaskModule.forRoot(),
     CalculadoraModule,
     ReactiveFormsModule,
     NgxCurrencyModule,
-
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 ],
@@ -72,6 +76,7 @@ export const firebaseConfigLeads = {
     StatusBar,
     NavParams,
     SplashScreen,
+    AngularFireAuthGuard,
     AngularFireAuth,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],

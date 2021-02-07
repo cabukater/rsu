@@ -1,3 +1,5 @@
+import { ComponentsDesktopModule } from './../components-desktop/components-desktop.module';
+import { CarrosselComponent } from './../components-desktop/carrossel/carrossel.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +15,7 @@ import { OutrosServicosPage } from './outros-servicos.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsDesktopModule,
     OutrosServicosPageRoutingModule
   ],
   declarations: [OutrosServicosPage]

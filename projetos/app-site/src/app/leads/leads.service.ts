@@ -1,15 +1,17 @@
+import { DOCUMENT } from '@angular/common';
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Lead } from './leads.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeadsService {
 leads : any[] = []
-  constructor(
-    private firebase: AngularFireDatabase,
+customersRef: AngularFireList<Lead> = null;
 
-  ) { }
+  constructor(
+    private firebase: AngularFireDatabase  ) { }
 
   getLeads() {
     //return this.http.get('http://cidades-estados-71974-default-rtdb.firebaseio.com/data?sigUF='+ uf).pipe(
@@ -22,4 +24,8 @@ leads : any[] = []
       )
    
   }
+  remove(item){
+    this.firebase.list('/clientes/data').remove(item)
+  }
+
 }

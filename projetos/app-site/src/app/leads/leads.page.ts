@@ -19,8 +19,11 @@ export class LeadsPage implements OnInit {
   }
 
   getLeads(){
-  
-    this.leads = this.service.getLeads()
+      this.leads = this.service.getLeads()
    }
+   getRecord(key) {   
+   console.log(key)
+   this.service.remove(key)
+  }
 
 }

@@ -7,15 +7,22 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { CalculadoraModule } from '../calculadora/calculadora.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    NgxMaskModule.forRoot(maskConfig),
     IonicModule,
     HomePageRoutingModule,
     ComponentsDesktopModule,
-    CalculadoraModule
+    CalculadoraModule,
+    ReactiveFormsModule
   ],
   declarations: [HomePage]
 })

@@ -1,6 +1,0 @@
-{
-    "X" : "pt",
-    "HOME": {
-        "HELLO": "Olá {{value}}"
-    }
-}

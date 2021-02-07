@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AngularFireAuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -39,11 +40,17 @@ const routes: Routes = [
   },
   {
     path: 'leads',
-    loadChildren: () => import('./leads/leads.module').then( m => m.LeadsPageModule)
+    loadChildren: () => import('./leads/leads.module').then( m => m.LeadsPageModule),
+    canActivate: [AngularFireAuthGuard]
   },
+  
   {
     path: 'login',
     loadChildren: () => import('./login-page/login-page.module').then( m => m.LoginPagePageModule)
+  },
+  {
+    path: 'calculadora-solar',
+    loadChildren: () => import('./calculadora-solar/calculadora-solar.module').then( m => m.CalculadoraSolarPageModule)
   }
  
 ];

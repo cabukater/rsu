@@ -2,14 +2,13 @@
 
   <ion-slides pager="true" [options]="slideOpts" class="animate__fadeInDown animate__delay-4s">
     <ion-slide>
-      <img src="assets/img/banner_desktop.png">
+      <a href="https://meufinanciamentosolar.com.br/#simulacao" target="_blank">
+      <img src="assets/img/banner_desktop.png"></a>
     </ion-slide>
     <ion-slide>
-      <img src="assets/img/banner_desktop.png">
+      <img src="assets/img/banner_2.png">
     </ion-slide>
-    <ion-slide>
-      <img src="assets/img/banner_desktop.png">
-    </ion-slide>
+    
   </ion-slides>
 
 
@@ -38,27 +37,69 @@
 </ion-fab>
 <section class="bg-2">
 
+
   <ion-grid fixed>
 
     <ion-row class="ion-margin-horizontal">
-      <ion-col size-md="8" size="12" >
-        <ion-text color="light">
-          <h2 class="title">Calcule <span class="white">Online</span></h2>
-          <p class="subtitle"> Saiba aqui o valor estimado de custo e economia.</p>
-        </ion-text>
-      </ion-col>
-      <ion-col size-md="4" size="12">
-        <button class="fluid ui big  action-4  primary button" (click)="openCalc()" >
-          Calcular
-        </button>
+      <ion-col>
+      <ion-text color="light"> 
+         <h2 class="title">Calcule <span class="white">Online</span></h2>
+        <p class="subtitle"> Saiba aqui  o valor estimado de custo e economia.</p>
+      </ion-text>
       </ion-col>
     </ion-row>
-
-
-
-  </ion-grid>
-
-
+    <form [formGroup]="form"> 
+        <ion-row class="ion-margin-horizontal">
+          <ion-col size-md="4" size="12" class="ion-padding">
+            <ion-text color="light"> 
+                <ion-label>Nome </ion-label>
+                </ion-text>
+          <input type="text" required formControlName="nome" required class="form-control-black">
+          <span *ngIf="ifError && form.controls.nome.invalid" class="alert-danger">
+            Informe seu nome
+        </span>
+        </ion-col>
+           
+          <ion-col size-md="2" size="12" class="ion-padding">
+            <ion-text color="light"> 
+                <ion-label>Telefone </ion-label>
+                </ion-text>
+          <input type="tel" formControlName="tel" mask="(00) 0000-0000" required class="form-control-black">
+          <span *ngIf="ifError && form.controls.telefone.invalid" class="alert-danger">
+            Informe seu telefone
+        </span>
+        </ion-col>
+            <ion-col size-md="3" size="12" class="ion-padding">
+                <ion-text color="light"> 
+                    <ion-label>Email </ion-label>
+                    </ion-text>
+                    <input type="hidden"  formControlName="pagina" >
+    
+              <input type="email" required formControlName="email"   class="form-control-black">
+              <span *ngIf="ifError && form.controls.email.invalid" class="alert-danger">
+                Informe um email valido
+            </span>
+            </ion-col>
+              <ion-col size-md="3" size="12" class="ion-padding">           
+                <button class="fluid ui big  action-4  primary button" (click)="saveUSer(form.value)" >
+                  Acessar calculadora
+                </button>
+              </ion-col>
+            </ion-row>
+            </form>
+          <ion-row>
+            <ion-col>
+            
+            </ion-col>
+          </ion-row>
+  
+          <ion-row>
+            <ion-col>
+      
+            </ion-col>
+          </ion-row>
+  
+        </ion-grid>
 </section>
 <section>
   <app-carousel-boxes class="ion-padding-top ion-margin-top boxes app-carousel-boxes"></app-carousel-boxes>
@@ -66,6 +107,6 @@
 <section class="bg-1">
   <app-mapa-form></app-mapa-form>
 </section>
-<section class="bg-3">
+<section class="bg-3 " style="padding-top:0; padding-bottom:5%">
   <app-carrossel></app-carrossel>
 </section>
