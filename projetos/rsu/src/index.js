@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Routing from "./routes.js";
-import Header from 'components/Header';
-import Footer from  'components/Footer'
+import Header from 'components/theme/Header';
+import Footer from  'components/theme/Footer'
 import './App.css';
 
 ReactDOM.render(
