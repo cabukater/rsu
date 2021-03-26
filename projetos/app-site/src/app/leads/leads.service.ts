@@ -20,8 +20,12 @@ customersRef: AngularFireList<Lead> = null;
     return this.firestore.collection('/clientes').snapshotChanges()
    
   }
-  remove(item){
-    this.firestore.doc('clientes/' + item.id).delete();
+  remove(client){
+    this.firestore.doc('clientes/' + client.id).delete();
+  }
+
+  updateClient(clientID,client) {
+    this.firestore.doc('clientes/' + clientID).update(client);
   }
 
  saveCLient(form){

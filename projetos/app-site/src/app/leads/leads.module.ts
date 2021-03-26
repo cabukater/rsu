@@ -10,6 +10,7 @@ import { LeadsPage } from './leads.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    FormsModule,
     LeadsPageRoutingModule
   ],
   declarations: [LeadsPage]
