@@ -24,4 +24,10 @@ customersRef: AngularFireList<Lead> = null;
     this.firestore.doc('/clientes/data'+ itemId).delete()
   }
 
+ saveCLient(form){
+  return new Promise<any>((resolve, reject) =>{
+  return this.firestore.collection('clientes').add(form)
+  .then(res => {}, err => reject(err));
+}
+  )}
 }

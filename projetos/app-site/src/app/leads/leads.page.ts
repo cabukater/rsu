@@ -26,7 +26,7 @@ export class LeadsPage implements OnInit {
             id: e.payload.doc.id,
             nome: e.payload.doc.data()['nome'],
             pagina: e.payload.doc.data()['pagina'],
-            telefone: e.payload.doc.data()['Description'],
+            tel: e.payload.doc.data()['tel'],
             email: e.payload.doc.data()['email']
             
           };

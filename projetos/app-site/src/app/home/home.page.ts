@@ -1,3 +1,4 @@
+import { LeadsService } from './../leads/leads.service';
 import { ICalcComponent } from './../i-calc/i-calc.component';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -21,8 +22,8 @@ export class HomePage {
   constructor(
     private router: Router,
     public service: CalculadoraService,
-    public modalController: ModalController
-
+    public modalController: ModalController,
+    public serviceLead: LeadsService
   ) {
     this.form = new FormGroup({
       email: new FormControl('',[Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
@@ -46,9 +47,13 @@ export class HomePage {
     if (this.form.valid){
       this.ifError = false
       console.log('teste')
-      this.router.navigate(['/calculadora-solar'])
+    //  this.router.navigate(['/calculadora-solar'])
 
-      this.service.saveCLient(form);
+      this.serviceLead.saveCLient(form).then(
+        resp => {
+          console.log(resp)
+        }
+      )
    
     }else{
       this.ifError = true
