@@ -1,3 +1,4 @@
+import { Lead } from './leads.model';
 import { LeadsService } from './leads.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -19,11 +20,25 @@ export class LeadsPage implements OnInit {
   }
 
   getLeads(){
-      this.leads = this.service.getLeads()
+      this.service.getLeads().subscribe(data => {
+        this.leads = data.map (e => {
+          return{
+            id: e.payload.doc.id,
+            nome: e.payload.doc.data()['nome'],
+            pagina: e.payload.doc.data()['pagina'],
+            telefone: e.payload.doc.data()['Description'],
+            email: e.payload.doc.data()['email']
+            
+          };
+        })
+     
+      });
    }
-   getRecord(key) {   
-   console.log(key)
-   this.service.remove(key)
+
+   getRecord(id) {   
+   console.log(id)
+   this.service.remove(id)
+   this. getLeads();
   }
 
 }

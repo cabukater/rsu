@@ -17,14 +17,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let lead of service.leads">
-    
-      <td>{{lead.nome}}</td>
+    <tr *ngFor="let lead of leads">
+          <td>{{lead.nome}}</td>
       <td>{{lead.email}}</td>
       <td>{{lead.tel}}</td>
       <td>{{lead.pagina}}</td>
 <td>
-  <button type="button" (click)="getRecord(lead)">
+  <button type="button" (click)="getRecord(lead.id)">
     deletar
   </button>
 </td>
