@@ -35,7 +35,7 @@ export class LeadsPage implements OnInit {
       });
    }
 
-   getRecord(id) {   
+   deleteLead(id) {   
    console.log(id)
    this.service.remove(id)
    this. getLeads();
